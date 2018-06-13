@@ -1,0 +1,11 @@
+{
+  "user-guide": {
+    "User Guide": ["introduction", "getting-started", "installation", "tour", "processing-elements", "software-components"]
+  },
+  "developer-guide": {
+    "Developer Guide": ["dev-introduction", "architecture", "development-environment", "tutorial-sources", "tutorial-processors", "sdk-guide-sources", "sdk-guide-processors", "sdk-guide-sinks"]
+  },
+  "faq": {
+    "FAQ": ["faq"]
+  }
+}
