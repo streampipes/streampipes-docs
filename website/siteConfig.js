@@ -43,7 +43,7 @@ const siteConfig = {
         {doc: 'faq', label: 'FAQ'},
         {blog: true, label: 'Blog'},
         {page: 'community', label: 'Community'},
-        { search: true },
+        {search: true},
     ],
 
     disableHeaderTitle: true,
@@ -80,17 +80,32 @@ const siteConfig = {
     new Date().getFullYear() +
     ' FZI Forschungszentrum Informatik',
 
+    usePrism: ['jsx'],
     highlight: {
         // Highlight.js theme to use for syntax highlighting in code blocks
-        theme: 'default',
+        theme: 'atom-one-dark',
     },
 
     // Add custom scripts here that would be placed in <script> tags
-    scripts: ['https://code.jquery.com/jquery-3.3.1.min.js', 'https://buttons.github.io/buttons.js', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js', '/js/custom.js'],
-    stylesheets: ['https://fonts.googleapis.com/icon?family=Material+Icons', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css', '/css/test.css'],
+    scripts: ['https://code.jquery.com/jquery-3.3.1.min.js',
+        'https://buttons.github.io/buttons.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js',
+        '/js/custom.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
+        '/js/code-block-buttons.js'],
+    stylesheets: ['https://fonts.googleapis.com/icon?family=Material+Icons',
+        'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css',
+        'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css',
+        '/css/admonition.css',
+        '/css/code-blocks-buttons.css'],
 
     /* On page navigation for the current documentation page */
     onPageNav: 'separate',
+    cleanUrl: true,
+    scrollToTop: true,
+    scrollToTopOptions: {
+        zIndex: 100,
+    },
 
     /* Open Graph and Twitter card images */
     ogImage: 'img/docusaurus.png',
