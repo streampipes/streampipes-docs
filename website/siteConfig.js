@@ -97,7 +97,7 @@ const siteConfig = {
         'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css',
         'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css',
         '/css/admonition.css',
-        '/css/code-blocks-buttons.css'],
+        '/css/code-block-buttons.css'],
 
     /* On page navigation for the current documentation page */
     onPageNav: 'separate',
