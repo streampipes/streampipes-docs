@@ -1,10 +1,9 @@
 ---
 id: tour
 title: Tour
-sidebar_label: tour
+sidebar_label: Tour
 ---
 
-# StreamPipes Tour
 StreamPipes is a framework that enables domain experts to model and execute stream processing pipelines in a big data infrastructure.
 The graphical user interface of StreamPipes is a web application that provides an easy to use solution for domain experts.
 In this page, an overview of the many features of StreamPipes is given. We will tour through all features and explain what they do and how users can interact with them.

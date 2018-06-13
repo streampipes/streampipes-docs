@@ -4,7 +4,6 @@ title: Getting Started
 sidebar_label: Getting Started
 ---
 
-# Quick Start
 This quick start explains how StreamPipes can be set up in the browser.
 Before starting with this guide, all steps from the installation guide must be finished successfully and StreamPipes must be up and running.
 Navigate to the StreamPipes graphical user interface in the browser.
@@ -35,7 +34,7 @@ The system configured all components by itself and the individual StreamPipes se
     <img src="/img/quickstart/setup/04_home.png" alt="Home page">
 </div>
 
-#First Examples
+## First Examples
 
 In this tutorial, you will create two simple pipelines that demonstrate the basic functionality of StreamPipes.
 The first example deals with monitoring a flow rate sensor.

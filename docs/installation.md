@@ -1,4 +1,8 @@
-# Installation Guide
+---
+id: installation
+title: Installation
+sidebar_label: Installation
+---
 
 <div class="admonition error">
 <div class="admonition-title">StreamPipes desktop version</div>

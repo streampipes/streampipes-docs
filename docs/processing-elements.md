@@ -4,7 +4,6 @@ title: Processing Elements
 sidebar_label: Processing Elements
 ---
 
-#Processing Elements
 This page explains all the Procesing Elements that are available in the StreamPipes Starter Kit.
 New Processing Elements can also be included during runtime.
 The once presented on this page come with StreamPipes and cen be used immediately. 

@@ -4,7 +4,6 @@ title: Introduction
 sidebar_label: Introduction
 ---
 
-# Introduction
 StreamPipes is a framework that enables users to work with data streams.
 It uses a lot of different technologies especially form the fields of big data, distributed computing and semantic web.
 One of the core concepts of StreamPipes is to add a higher semantic layer on top of big data processing technologies to ease their usage.

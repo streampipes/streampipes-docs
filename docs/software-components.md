@@ -4,7 +4,6 @@ title: Software Components
 sidebar_label: Software Components
 ---
 
-# Components
 This page contains all the software components that can be used within the StreamPipes framework.
 Some of them are mandatory but others are just necessary for a special capabilities.
 In the [Installation Guide](../quick_start/installation.md#installation_1) we  already provide a docker-compose.yml file with all the necessary components 
@@ -13,7 +12,7 @@ Extend this configuration files with further containers described on this page a
 according to your needs.
 
 
-### StreamPipes Framework
+## StreamPipes Framework
 
 ??? tip "StreamPipes Backend"
     ####Description
@@ -54,7 +53,7 @@ according to your needs.
     ```
 
 
-### StreamPipes Services
+## StreamPipes Services
 
 ??? tip "Consul"
     ####Description
@@ -189,7 +188,7 @@ according to your needs.
 
 
 
-### Processing Elements
+## Processing Elements
 
 ??? tip "PE Examples Sources"
     ####Description

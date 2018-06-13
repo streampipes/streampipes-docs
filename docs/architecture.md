@@ -4,7 +4,6 @@ title: Architecture
 sidebar_label: Architecture
 ---
 
-## High-level architecture
 The following picture illustrates the high-level architecture of StreamPipes:
 
 <img src="/img/architecture/high-level-architecture.png" alt="High Level Architecture of StreamPipes">

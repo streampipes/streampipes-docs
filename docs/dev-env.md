@@ -4,8 +4,6 @@ title: Development Environment
 sidebar_label: Development Environment
 ---
 
-# Development Environment
-
 In this section, we describe our recommended minimum setup for locally setting up a development instance of StreamPipes needed to develop, run and test new pipeline elements.
 
 ## IDE & required dev tools
