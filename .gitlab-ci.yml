@@ -10,12 +10,13 @@ build:
   image: beevelop/nodejs-python
   stage: build
   script:
+    - cd website/
     - export NODE_PATH=/cache/node_modules
     - npm install --unsafe-perm
     - npm run build
   artifacts:
     paths:
-      - build/streampipes-docs/**
+      - website/build/streampipes-docs/**
     expire_in: 1 week
 
 
