@@ -8,27 +8,29 @@ sidebar_label: SDK Guide Sources
 
 Open the IDE of your choice and create a new maven project. Add the following dependencies to your pom file:
 
-??? summary "pom.xml"
-    ```xml
-    <dependency>
-        <groupId>org.streampipes</groupId>
-        <artifactId>streampipes-container-standalone</artifactId>
-        <version>0.50.0</version>
-    </dependency>
+<details class="info">
+<summary>pom.xml</summary>
+```xml
+<dependency>
+    <groupId>org.streampipes</groupId>
+    <artifactId>streampipes-container-standalone</artifactId>
+    <version>0.50.0</version>
+</dependency>
 
-    <dependency>
-        <groupId>org.streampipes</groupId>
-        <artifactId>streampipes-sdk</artifactId>
-        <version>0.50.0</version>
-    </dependency>
+<dependency>
+    <groupId>org.streampipes</groupId>
+    <artifactId>streampipes-sdk</artifactId>
+    <version>0.50.0</version>
+</dependency>
 
-    <!-- This dependency needs to be imported if you plan to connect a new data stream with StreamPipes -->
-    <dependency>
-        <groupId>org.streampipes</groupId>
-        <artifactId>streampipes-sources</artifactId>
-        <version>0.50.0</version>
-    </dependency>
-    ```
+<!-- This dependency needs to be imported if you plan to connect a new data stream with StreamPipes -->
+<dependency>
+    <groupId>org.streampipes</groupId>
+    <artifactId>streampipes-sources</artifactId>
+    <version>0.50.0</version>
+</dependency>
+```
+</details>
 
 Now you need to create three new classes:
 

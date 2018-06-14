@@ -15,120 +15,121 @@ In order to quickly test developed pipeline elements without needing to install 
 If you have Docker installed on your development machine, simply run the following docker-compose file, which has been successfully tested on both Linux and Windows-based operating systems.
 
 ### Docker-Compose File
-??? summary "docker-compose.yml"
-    ####Docker Compose
-    ```yaml
-    version: "2"
-    services:
-      consul:
-        image: consul
-        environment:
-          - "CONSUL_LOCAL_CONFIG={\"disable_update_check\": true}"
-          - "CONSUL_BIND_INTERFACE=eth0"
-          - "CONSUL_HTTP_ADDR=0.0.0.0"
-        entrypoint:
-          - consul
-          - agent
-          - -server
-          - -bootstrap-expect=1
-          - -data-dir=/consul/data
-          - -node=consul-one
-          - -bind={{ GetInterfaceIP "eth0" }}
-          - -client=0.0.0.0
-          - -enable-script-checks=true
-          - -ui
-        volumes:
-          - ./config/consul:/consul/data
-        ports:
-          - "8500:8500"
-          - "8600:8600"
-        networks:
-          spnet:
-            ipv4_address: 172.30.0.9
-
-      zookeeper:
-        image: wurstmeister/zookeeper
-        ports:
-          - "2181:2181"
-        networks:
-          spnet:
-
-      kafka:
-        image: wurstmeister/kafka:0.10.0.1
-        ports:
-          - "9092:9092"
-        environment:
-          KAFKA_ADVERTISED_HOST_NAME: ###TODO ADD HOSTNAME HERE ###
-          KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-        volumes:
-          - /var/run/docker.sock:/var/run/docker.sock
-        networks:
-          spnet:
-
-      backend:
-        image: ipe-wim-gitlab.fzi.de:5000/streampipes/ce/backend:SNAPSHOT
-        depends_on:
-          - "consul"
-        ports:
-          - "8030:8030"
-        volumes:
-          - ./config:/root/.streampipes
-          - ./config/aduna:/root/.aduna
-        networks:
-          spnet:
-
-      activemq:
-        image: ipe-wim-gitlab.fzi.de:5000/streampipes/services/activemq
-        ports:
-          - "61616:61616"
-          - "61614:61614"
-          - "8161:8161"
-        networks:
-          spnet:
-
-      couchdb:
-        image: couchdb
-        ports:
-          - "5984:5984"
-        volumes:
-          - ./config/couchdb/data:/usr/local/var/lib/couchdb
-        networks:
-          spnet:
-
-      jobmanager:
-        image: ipe-wim-gitlab.fzi.de:5000/streampipes/services/flink
-        ports:
-          - "8081:8099"
-        command: jobmanager
-        networks:
-          spnet:
-
-      taskmanager:
-        image: ipe-wim-gitlab.fzi.de:5000/streampipes/services/flink
-        command: taskmanager
-        environment:
-          - FLINK_NUM_SLOTS=20
-        networks:
-          spnet:
-
-      nginx:
-        image: ipe-wim-gitlab.fzi.de:5000/streampipes/ui/dev
-        ports:
-          - "80:80"
-        depends_on:
-          - backend
-        networks:
-          spnet:
-
+<details class="info">
+<summary>docker-compose.yml</summary>
+#### Docker Compose
+```yaml
+version: "2"
+services:
+  consul:
+    image: consul
+    environment:
+      - "CONSUL_LOCAL_CONFIG={\"disable_update_check\": true}"
+      - "CONSUL_BIND_INTERFACE=eth0"
+      - "CONSUL_HTTP_ADDR=0.0.0.0"
+    entrypoint:
+      - consul
+      - agent
+      - -server
+      - -bootstrap-expect=1
+      - -data-dir=/consul/data
+      - -node=consul-one
+      - -bind={{ GetInterfaceIP "eth0" }}
+      - -client=0.0.0.0
+      - -enable-script-checks=true
+      - -ui
+    volumes:
+      - ./config/consul:/consul/data
+    ports:
+      - "8500:8500"
+      - "8600:8600"
     networks:
       spnet:
-        driver: bridge
-        ipam:
-         config:
-           - subnet: 172.30.0.0/16
-             gateway: 172.30.0.1
+        ipv4_address: 172.30.0.9
 
-    ```
+  zookeeper:
+    image: wurstmeister/zookeeper
+    ports:
+      - "2181:2181"
+    networks:
+      spnet:
+
+  kafka:
+    image: wurstmeister/kafka:0.10.0.1
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_ADVERTISED_HOST_NAME: ###TODO ADD HOSTNAME HERE ###
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      spnet:
+
+  backend:
+    image: ipe-wim-gitlab.fzi.de:5000/streampipes/ce/backend:SNAPSHOT
+    depends_on:
+      - "consul"
+    ports:
+      - "8030:8030"
+    volumes:
+      - ./config:/root/.streampipes
+      - ./config/aduna:/root/.aduna
+    networks:
+      spnet:
+
+  activemq:
+    image: ipe-wim-gitlab.fzi.de:5000/streampipes/services/activemq
+    ports:
+      - "61616:61616"
+      - "61614:61614"
+      - "8161:8161"
+    networks:
+      spnet:
+
+  couchdb:
+    image: couchdb
+    ports:
+      - "5984:5984"
+    volumes:
+      - ./config/couchdb/data:/usr/local/var/lib/couchdb
+    networks:
+      spnet:
+
+  jobmanager:
+    image: ipe-wim-gitlab.fzi.de:5000/streampipes/services/flink
+    ports:
+      - "8081:8099"
+    command: jobmanager
+    networks:
+      spnet:
+
+  taskmanager:
+    image: ipe-wim-gitlab.fzi.de:5000/streampipes/services/flink
+    command: taskmanager
+    environment:
+      - FLINK_NUM_SLOTS=20
+    networks:
+      spnet:
+
+  nginx:
+    image: ipe-wim-gitlab.fzi.de:5000/streampipes/ui/dev
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      spnet:
+
+networks:
+  spnet:
+    driver: bridge
+    ipam:
+     config:
+       - subnet: 172.30.0.0/16
+         gateway: 172.30.0.1
+```
+</details>
 
 Do not forget to replace the ##Add HOSTNAME## variable in the compose file with the hostname of your machine!
 
@@ -155,47 +156,49 @@ These are available on Github as defined below. Just clone the project and chang
 
 In order to develop a new pipeline element from scratch, you need to create a new Maven project and import the following dependencies:
 
-??? summary "pom.xml"
-    ```
-    <dependency>
-        <groupId>org.streampipes</groupId>
-        <artifactId>streampipes-container-standalone</artifactId>
-        <version>0.50.0</version>
-    </dependency>
+<details class="info">
+<summary>pom.xml</summary>
+```
+<dependency>
+    <groupId>org.streampipes</groupId>
+    <artifactId>streampipes-container-standalone</artifactId>
+    <version>0.50.0</version>
+</dependency>
 
-    <dependency>
-        <groupId>org.streampipes</groupId>
-        <artifactId>streampipes-sdk</artifactId>
-        <version>0.50.0</version>
-    </dependency>
+<dependency>
+    <groupId>org.streampipes</groupId>
+    <artifactId>streampipes-sdk</artifactId>
+    <version>0.50.0</version>
+</dependency>
 
-    <dependency>
-        <groupId>org.streampipes</groupId>
-        <artifactId>streampipes-vocabulary</artifactId>
-        <version>0.50.0</version>
-    </dependency>
+<dependency>
+    <groupId>org.streampipes</groupId>
+    <artifactId>streampipes-vocabulary</artifactId>
+    <version>0.50.0</version>
+</dependency>
 
-    <!-- This dependency needs to be imported if you plan to connect a new data stream with StreamPipes -->
-    <dependency>
-        <groupId>org.streampipes</groupId>
-        <artifactId>streampipes-sources</artifactId>
-        <version>0.50.0</version>
-    </dependency>
+<!-- This dependency needs to be imported if you plan to connect a new data stream with StreamPipes -->
+<dependency>
+    <groupId>org.streampipes</groupId>
+    <artifactId>streampipes-sources</artifactId>
+    <version>0.50.0</version>
+</dependency>
 
-    <!-- This dependency needs to be imported if you plan to develop a new data processor or data sink using the Apache Flink wrapper -->
-    <dependency>
-        <groupId>org.streampipes</groupId>
-        <artifactId>streampipes-wrapper-flink</artifactId>
-        <version>0.50.0</version>
-    </dependency>
+<!-- This dependency needs to be imported if you plan to develop a new data processor or data sink using the Apache Flink wrapper -->
+<dependency>
+    <groupId>org.streampipes</groupId>
+    <artifactId>streampipes-wrapper-flink</artifactId>
+    <version>0.50.0</version>
+</dependency>
 
-    <!-- This dependency needs to be imported if you plan to develop a new data processor or data sink which is running directly on the JVM -->
-    <dependency>
-        <groupId>org.streampipes</groupId>
-        <artifactId>streampipes-wrapper-standalone</artifactId>
-        <version>0.50.0</version>
-    </dependency>
-    ```
+<!-- This dependency needs to be imported if you plan to develop a new data processor or data sink which is running directly on the JVM -->
+<dependency>
+    <groupId>org.streampipes</groupId>
+    <artifactId>streampipes-wrapper-standalone</artifactId>
+    <version>0.50.0</version>
+</dependency>
+```
+</details>
 
 The following three dependencies are mandatory:
 

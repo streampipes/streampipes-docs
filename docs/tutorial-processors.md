@@ -18,10 +18,14 @@ This pipeline element will be a generic element that works with any event stream
 
 The algorithm outputs every location event once the position has entered the geofence.
 
-!!! note
-    The implementation in this tutorial is pretty simple - our processor will fire an event every time the GPS location is inside the geofence.
-    In a real-world application, you would probably want to define a pattern that recognizes the _first_ event a vehicle enters the geofence.
-    This can be easily done using a CEP library, e.g., Apache Flink CEP.
+
+<div class="admonition note">
+<div class="admonition-title">Note</div>
+<p>The implementation in this tutorial is pretty simple - our processor will fire an event every time the GPS location is inside the geofence.
+       In a real-world application, you would probably want to define a pattern that recognizes the _first_ event a vehicle enters the geofence.<br/>
+       This can be easily done using a CEP library, e.g., Apache Flink CEP.</p>
+</div>
+
 
 ## Project setup
 
@@ -42,8 +46,12 @@ Rename the classes (or create new classes by copying these files) as follows:
 * `ProcessorTemplateParameters.java` to `GeofencingParameters.java`
 * `ProcessorTemplateProgram.java` to `GeofencingProgram.java`
 
-!!! tip
-    Besides the basic project skeleton, the sample project also includes an example Dockerfile you can use to package your application into a Docker container.
+
+<div class="admonition tip">
+<div class="admonition-title">Tip</div>
+<p>Besides the basic project skeleton, the sample project also includes an example Dockerfile you can use to package your application into a Docker container.</p>
+</div>
+
 
 **Option 2: Start a new project from scratch**
 
@@ -263,10 +271,13 @@ Finally, return an instance of the class ```GeofencingProgram```:
 return new GeofencingProgram(params);
 ```
 
-!!! info
-    The line above uses the Flink MiniCluster to start the Flink program for debugging purposes.
-    Before you build the project and use it in a real environment, replace the line as follows, which triggers cluster execution:
-    `return new GeofencingProgram(params, new FlinkDeploymentConfig(Config.JAR_FILE, Config.INSTANCE.getFlinkHost(), Config.INSTANCE.getFlinkPort())`
+<div class="admonition tip">
+<div class="admonition-title">Info</div>
+<p>The line above uses the Flink MiniCluster to start the Flink program for debugging purposes.
+       Before you build the project and use it in a real environment, replace the line as follows, which triggers cluster execution:
+       <code>return new GeofencingProgram(params, new FlinkDeploymentConfig(Config.JAR_FILE, Config.INSTANCE.getFlinkHost(), Config.INSTANCE.getFlinkPort())</code></p>
+</div>
+
 
 Great! That's all we need to describe a data processor for usage in StreamPipes. Your controller class should look as follows:
 
@@ -395,11 +406,13 @@ return dataStreams[0].flatMap(new GeofencingProcessor(params.getLatitudeFieldNam
     params.getCenterLatitude(), params.getCenterLongitude(), params.getRadius()));
 ```
 
+<div class="admonition info">
+<div class="admonition-title">Info</div>
+<p>Although you could pass the <code>GeofencingParameters</code> class directly to the <code>GeofencingProcessor</code>, in our example we extract the properties to the class.
+       This is due to the circumstance that the parameter class currently is not serializable and Flink requires all classes to be serializable.
+       Future versions will fix this bug in StreamPipes.</p>
+</div>
 
-!!! info
-    Although you could pass the `GeofencingParameters` class directly to the `GeofencingProcessor`, in our example we extract the properties to the class.
-    This is due to the circumstance that the parameter class currently is not serializable and Flink requires all classes to be serializable.
-    Future versions will fix this bug in StreamPipes.
 
 ## Preparing the container
 The final step is to define the deployment type of our new data source. In this tutorial, we will create a so-called `StandaloneModelSubmitter`.
@@ -416,22 +429,31 @@ public static void main(String[] args) {
 }
 ```
 
-!!! info
-    In the example above, we make use of a class `Config`.
-    This class contains both mandatory and additional configuration parameters required by a pipeline element container.
-    These values are stored in the Consul-based key-value store of your StreamPipes installation.
-    The SDK guide contains a detailed manual on managing container configurations.
+<div class="admonition info">
+<div class="admonition-title">Info</div>
+<p>In the example above, we make use of a class `Config`.
+       This class contains both mandatory and additional configuration parameters required by a pipeline element container.
+       These values are stored in the Consul-based key-value store of your StreamPipes installation.
+       The SDK guide contains a detailed manual on managing container configurations.
+</p>
+</div>
 
 ## Starting the container
+<div class="admonition tip">
+<div class="admonition-title">Tip</div>
+<p>By default, the container registers itself using the hostname later used by the Docker container, leading to a 404 error when you try to access an RDF description.
+       For local development, you need to change the hostname in Consul to `localhost`.
+       Open the class `TemplateConfig.java` and change the value defined in the `HOST` variable from `template-flink` to `localhost`.
+</p>
+</div>
 
-!!! tip
-    By default, the container registers itself using the hostname later used by the Docker container, leading to a 404 error when you try to access an RDF description.
-    For local development, you need to change the hostname in Consul to `localhost`.
-    Open the class `TemplateConfig.java` and change the value defined in the `HOST` variable from `template-flink` to `localhost`.
 
-!!! tip
-    The default port of all pipeline element containers as defined in the `Config` file is port 8090.
-    If you'd like to run mutliple containers at the same time on your development machine, you can modify the port in the `Config.java` class.
+<div class="admonition tip">
+<div class="admonition-title">Tip</div>
+<p> The default port of all pipeline element containers as defined in the `Config` file is port 8090.
+       If you'd like to run mutliple containers at the same time on your development machine, you can modify the port in the `Config.java` class.
+</p>
+</div>
 
 Now we are ready to start our container!
 

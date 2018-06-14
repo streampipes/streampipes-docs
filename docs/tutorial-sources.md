@@ -41,8 +41,11 @@ Rename the class `TemplateSource.java` to `VehicleSource.java` and the class `Te
 
 That's it, go to the next section to learn how to create your first data stream!
 
-!!! tip
-    Besides the basic project skeleton, the sample project also includes an example Dockerfile you can use to package your application into a Docker container.
+<div class="admonition tip">
+<div class="admonition-title">Tip</div>
+<p>Besides the basic project skeleton, the sample project also includes an example Dockerfile you can use to package your application into a Docker container.
+</p>
+</div>
 
 **Option 2: Start a new project from scratch**
 
@@ -176,19 +179,22 @@ public static void main(String[] args) {
 This code adds the `VehicleSource` and sets the port where the web server will be available. Finally, the `init` method is called
 which triggers the generation of the corresponding RDF description and startup of the web server.
 
-!!! info
-    In the example above, we make use of a class `TemplateConfig`.
-    This class contains both mandatory and additional configuration parameters required by a pipeline element container.
-    These values are stored in the Consul-based key-value store of your StreamPipes installation.
-    The SDK guide contains a detailed manual on managing container configurations.
-
+<div class="admonition info">
+<div class="admonition-title">Info</div>
+<p>In the example above, we make use of a class `TemplateConfig`.
+       This class contains both mandatory and additional configuration parameters required by a pipeline element container.
+       These values are stored in the Consul-based key-value store of your StreamPipes installation.
+       The SDK guide contains a detailed manual on managing container configurations.</p>
+</div>
 
 ## Starting the container
 
-!!! tip
-    By default, the container registers itself using the hostname later used by the Docker container, leading to a 404 error when you try to access an RDF description.
-    For local development, you need to change the hostname in Consul to `localhost`.
-    Open the class `TemplateConfig.java` and change the value defined in the `HOST` variable from `template-sources` to `localhost`.
+<div class="admonition tip">
+<div class="admonition-title">Tip</div>
+<p>By default, the container registers itself using the hostname later used by the Docker container, leading to a 404 error when you try to access an RDF description.
+       For local development, you need to change the hostname in Consul to `localhost`.
+       Open the class `TemplateConfig.java` and change the value defined in the `HOST` variable from `template-sources` to `localhost`.</p>
+</div>
 
 Now we are ready to start our first container!
 
