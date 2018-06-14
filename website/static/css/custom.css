@@ -66,3 +66,8 @@ p {
 .sp-button {
     background: white;
 }
+
+.slick-prev:before, .slick-next:before {
+    color:#39b54a;
+}
+
