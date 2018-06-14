@@ -1,0 +1,29 @@
+variables:
+  REGISTRY_HOST: ipe-wim-gitlab.fzi.de:5000
+  IMAGE_NAME: $REGISTRY_HOST/$CI_PROJECT_PATH/$CI_COMMIT_REF_NAME
+
+stages:
+   - build
+   - docker
+
+build:
+  image: beevelop/nodejs-python
+  stage: build
+  script:
+    - export NODE_PATH=/cache/node_modules
+    - npm install --unsafe-perm
+    - npm run build
+  artifacts:
+    paths:
+      - build/streampipes-docs/**
+    expire_in: 1 week
+
+
+nginx:
+  image: docker:17.06.0-ce
+  stage: docker
+  script:
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $REGISTRY_HOST
+    - docker build --pull --no-cache -t $IMAGE_NAME .
+    - docker push $IMAGE_NAME
+
