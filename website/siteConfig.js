@@ -109,7 +109,7 @@ const siteConfig = {
     },
 
     /* Open Graph and Twitter card images */
-    ogImage: 'img/docusaurus.png',
+    ogImage: 'img/favicon.png',
     twitterImage: 'img/docusaurus.png',
     repoUrl: 'https://github.com/streampipes/streampipes-ce'
 
