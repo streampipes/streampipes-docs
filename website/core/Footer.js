@@ -45,6 +45,12 @@ class Footer extends React.Component {
                             <a href={this.docUrl('faq-common-problems.html', this.props.language)}>
                                 Frequently Asked Questions
                             </a>
+                            <a href={this.docUrl('privacy.html', this.props.language)}>
+                                Privacy Notice
+                            </a>
+                            <a href="https://www.fzi.de/footer/impressum/">
+                                Imprint
+                            </a>
                         </div>
                         <div>
                             <h5>Community</h5>
