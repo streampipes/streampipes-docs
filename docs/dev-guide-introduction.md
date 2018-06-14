@@ -1,5 +1,5 @@
 ---
-id: dev-introduction
+id: dev-guide-introduction
 title: Introduction
 sidebar_label: Introduction
 ---

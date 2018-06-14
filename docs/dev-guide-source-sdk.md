@@ -1,5 +1,5 @@
 ---
-id: sdk-guide-sources
+id: dev-guide-sdk-guide-sources
 title: SDK Guide Sources
 sidebar_label: SDK Guide Sources
 ---

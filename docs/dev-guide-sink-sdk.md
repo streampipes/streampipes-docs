@@ -1,5 +1,5 @@
 ---
-id: sdk-guide-sinks
+id: dev-guide-sdk-guide-sinks
 title: SDK Guide Sinks
 sidebar_label: SDK Guide Sinks
 ---

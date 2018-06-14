@@ -1,5 +1,5 @@
 ---
-id: tour
+id: user-guide-tour
 title: Tour
 sidebar_label: Tour
 ---

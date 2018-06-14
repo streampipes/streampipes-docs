@@ -1,5 +1,5 @@
 ---
-id: processing-elements
+id: user-guide-processing-elements
 title: Processing Elements
 sidebar_label: Processing Elements
 ---

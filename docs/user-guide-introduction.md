@@ -1,5 +1,5 @@
 ---
-id: introduction
+id: user-guide-introduction
 title: Introduction
 sidebar_label: Introduction
 ---

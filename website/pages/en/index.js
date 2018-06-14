@@ -59,7 +59,7 @@ const Logo = props => (
 
 const ScreenshotSection = props => (
     <div>
-        <img src={props.screenshot_src} class="screenshot"/>
+        <img src={props.screenshot_src} className="screenshot"/>
     </div>
 );
 
@@ -86,7 +86,8 @@ class HomeSplash extends React.Component {
                 <div className="inner">
                     <ProjectTitle/>
                     <PromoSection>
-                        <Button href={docUrl('installation.html', language)}>Getting Started</Button>
+                        <Button href={docUrl('user-guide-tour.html', language)}>View the tour</Button>
+                        <Button href={docUrl('user-guide-installation.html', language)}>InstallatioN Guide</Button>
                     </PromoSection>
                     <ScreenshotSection screenshot_src={imgUrl('streampipes-screenshot.png')}/>
                 </div>
@@ -235,9 +236,6 @@ class Index extends React.Component {
         return (
             <div>
                 <HomeSplash language={language}/>
-                <div className="mainContainer">
-                    <Grid></Grid>
-                </div>
             </div>
         );
     }

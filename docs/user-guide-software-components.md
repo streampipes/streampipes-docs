@@ -1,5 +1,5 @@
 ---
-id: software-components
+id: user-guide-software-components
 title: Software Components
 sidebar_label: Software Components
 ---

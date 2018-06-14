@@ -38,9 +38,9 @@ const siteConfig = {
 
     // For no header links in the top nav bar -> headerLinks: [],
     headerLinks: [
-        {doc: 'introduction', label: 'User Guide'},
-        {doc: 'dev-introduction', label: 'Developer Guide'},
-        {doc: 'faq', label: 'FAQ'},
+        {doc: 'user-guide-introduction', label: 'User Guide'},
+        {doc: 'dev-guide-introduction', label: 'Developer Guide'},
+        {doc: 'faq-common-problems', label: 'FAQ'},
         {blog: true, label: 'Blog'},
         {page: 'community', label: 'Community'},
         {search: true},
@@ -96,6 +96,7 @@ const siteConfig = {
     stylesheets: ['https://fonts.googleapis.com/icon?family=Material+Icons',
         'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css',
         'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css',
+        'https://fonts.googleapis.com/css?family=Roboto',
         '/css/admonition.css',
         '/css/code-block-buttons.css'],
 

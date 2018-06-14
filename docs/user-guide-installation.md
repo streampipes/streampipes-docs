@@ -1,5 +1,5 @@
 ---
-id: installation
+id: user-guide-installation
 title: Installation
 sidebar_label: Installation
 ---
@@ -7,7 +7,7 @@ sidebar_label: Installation
 <div class="admonition error">
 <div class="admonition-title">StreamPipes desktop version</div>
 <p>StreamPipes usually runs on a big data infrastructure. We did our best that you can install it yourself with less powerful hardware, even on your laptop.<br/>
-    If you have any problems or are interested in a production system please [contact us](mailto:streampipes@fzi.de)</p>
+    If you have any problems or are interested in a production system please <a href="mailto:feedback@streampipes.org">contact us</a>!</p>
 </div>
 
 ## Prerequisites
