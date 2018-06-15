@@ -45,6 +45,11 @@ const siteConfig = {
         {page: 'community', label: 'Community'},
         {search: true},
     ],
+    algolia: {
+        apiKey: '0fedc89dddf2810657708b178e56ef02',
+        indexName: 'streampipes',
+        algoliaOptions: {} // Optional, if provided by Algolia
+    },
 
     disableHeaderTitle: true,
 
