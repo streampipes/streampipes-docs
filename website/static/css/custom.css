@@ -29,6 +29,12 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.blog-image {
+    max-width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 .container .wrapper h4 {
     font-weight: bolder;
     font-family: 'Roboto', sans-serif;
