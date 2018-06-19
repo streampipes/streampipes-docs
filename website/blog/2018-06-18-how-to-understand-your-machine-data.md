@@ -96,7 +96,7 @@ Furthermore, we provide a semantic layer for all elements, including data source
 With that layer, our system is capable of understanding the meaning and further support the user to ensure that just semantically correct pipelines are created.
 
 In this first blog post of our series, we gave a first introduction how data produced by machines and systems can be analyzed and value can be generated out of it.
-In the following blog posts explain the individual parts in more detail to provide you with enough knowledge to start analyzing your own data.
+In the following blog posts we explain the individual parts in more detail to provide you with enough knowledge to start analyzing your own data.
 
 * **[Part 1: Overview](/blog/2018/06/18/how-to-understand-your-machine-data)**
 * Part 2: Data Sources
