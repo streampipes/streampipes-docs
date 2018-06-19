@@ -1,10 +1,10 @@
 ---
-title: How to understand your machine data? [Part 1 / 6]
-author: Dominik Riemer
-authorURL: http://twitter.com/streampipes
-authorImageURL: https://www.fzi.de/fileadmin/_processed_/csm_Riemer_Dominik_d14f3427fb.jpg
+title: How to understand your machine data?
+author: Philipp Zehnder
+authorURL: http://twitter.com/philipp10der
+authorImageURL: https://www.fzi.de/fileadmin/_processed_/csm_2017-09-04_FO_Zehnder-Philipp_003_WEB_95564e4076.jpg
 ---
-**<div style="float: right; padding-right: 40px;">8 minutes to read</div>**
+**<div style="float: left; padding-right: 40px;">8 minutes to read</div>**
 <br>
 
 
@@ -12,6 +12,9 @@ Data is the new oil. Probably everybody of you has heard or read this sentence b
 It is often stated how important data and data understanding is for companies today.
 But what does this actually mean?  How does the data look like that is produced by your machines and systems?
 And how can we solve the big challenge to turn this raw data into insights that can be understood by humans?
+
+<!--truncate-->
+
 When it comes to data analytics people often talk about the big players like Google, Facebook, or Netflix which collect a lot of data about their users and their usage behavior.
 The core of their business model is to use data and turn it into profit. Nowadays all companies have the requirement to analyze their data.
 But since this was not originally part of their business model it is very challenging for them to catch up.
