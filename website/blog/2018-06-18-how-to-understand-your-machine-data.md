@@ -20,8 +20,8 @@ The core of their business model is to use data and turn it into profit. Nowaday
 But since this was not originally part of their business model it is very challenging for them to catch up.
 To gain insights from data, it is often referred to advanced analytics and machine learning. Before such techniques can be used some work must be done.
 A first, basic part of that is to understand your data. We do that in four steps, as can be seen in figure below.
-First data sources must be accessed, then data can be integrated and for example be stored in a data lake.
-After that, we employ rule-based analytics to find patterns and situations in the data.
+First data sources must be accessed, then they can be integrated and for example be stored in a data lake.
+After that, we employ rule-based analytics to find patterns and situations.
 In the end, machine learning and advanced analytics algorithms can be used to get more out of the data.
 The idea behind those steps is to generate value as early as possible by collecting the low-hanging fruits first.
 We develop methodologies and tools for the individual steps to also allow domain experts to perform them to bridge the gap between the big tech companies and more traditional industries.
@@ -42,14 +42,13 @@ All those sensors are very simple, they make iterative observations and send the
 
 <img class="blog-image" style="max-width:70%;" src="/blog/assets/2018-06-18/02_anlage.png" alt="Water Circle Image">
 
-Before we go into detail, we want to explain the term streaming data, because we focus on machine and sensor data which is continually produced in a stream.
+Before we go into detail, we want to explain the term streaming data, because we focus on machine and sensor data which is continually produced in a streaming fashion.
 The opposite of streaming data are fixed sized data sets, called batch data.
 Since always new data is produced by sensors, it is not possible to wait till all data is completely produced and then process it.
-This challenge must be resolved by systems and algorithms that process this data.
 Different to that is batch data.
-The advantage is when the processing starts no new data is added anymore.
+The advantage of batch data is, when the processing starts no new data is added anymore.
 Streaming data can also be processed with batch processing systems.
-Therefore, a data stream must be separated into fixed chunks of data which are then processed in a batch fashion.
+Therefore, a data stream must be separated into fixed chunks which are then processed in a batch fashion.
 This is possible but the more natural fit is to use streaming systems since they were designed to process streaming data.
 
 In an environment where we process machine data we have different components.
@@ -63,7 +62,7 @@ Even if the middleware is a central component, it is not a bottleneck and also n
 This is the component where the data is analyzed and higher-level information is generated.
 In the end, results can be stored in **data bases**.
 From there, other applications like for example dashboards can access the calculated results.
-This is the high-level architecture of processing industrial data streams.
+This is the high-level architecture of processing data streams.
 
 <img class="blog-image" src="/blog/assets/2018-06-18/03_architecture.png" alt="Overall architecture">
 
