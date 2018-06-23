@@ -5,6 +5,7 @@ variables:
 stages:
    - build
    - docker
+   - deploy
 
 build:
   image: beevelop/nodejs-python
@@ -27,4 +28,15 @@ nginx:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $REGISTRY_HOST
     - docker build --pull --no-cache -t $IMAGE_NAME .
     - docker push $IMAGE_NAME
+
+deploy:
+  image: arvindr226/alpine-ssh
+  stage: deploy
+  only: 
+    - master
+  script:
+    - sshpass -V
+    - export SSHPASS=$BOTY_PWD 
+    - sshpass -e ssh boty@kalmar46.fzi.de 'bash -s' < /opt/streampipes-docs-new/deploy.sh
+
 
