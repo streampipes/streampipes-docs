@@ -30,12 +30,12 @@ nginx:
     - docker push $IMAGE_NAME
 
 deploy:
-  image: arvindr226/alpine-ssh
+  image: alpine
   stage: deploy
   only: 
     - master
   script:
-    - apk add sshpass
+    - apk add --update openssh
     - sshpass -V
     - export SSHPASS=$BOTY_PWD 
     - sshpass -e ssh boty@kalmar46.fzi.de 'bash -s' < /opt/streampipes-docs-new/deploy.sh
