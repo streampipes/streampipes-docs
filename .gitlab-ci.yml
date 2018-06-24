@@ -35,9 +35,8 @@ deploy:
   only: 
     - master
   script:
-    - apk add --update openssh
+    - apk add --update --no-cache openssh sshpass
     - sshpass -V
     - export SSHPASS=$BOTY_PWD 
-    - sshpass -e ssh boty@kalmar46.fzi.de 'bash -s' < /opt/streampipes-docs-new/deploy.sh
-
+    - sshpass -e ssh boty@kalmar46.fzi.de /opt/streampipes-docs-new/deploy.sh
 
