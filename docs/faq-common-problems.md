@@ -4,13 +4,13 @@ title: Common Problems
 sidebar_label: Common Problems
 ---
 
-* [Windows 10: Consul, Kafka, Zookeeper, or Kafka-Rest did not start](./common-problems.md#windows-10-consul-kafka-zookeeper-or-kafka-rest-did-not-start)
-* [Linux / OSX: Consul does not start](./common-problems.md#consul-does-not-start)
-* [Run StreamPipes in a VM in Windows](./common-problems.md#run-streampipes-in-a-vm-in-windows)
-* [Only few processors are available in the pipeline editor](./common-problems.md#just-a-few-processors-are-available-in-the-pipeline-editor)
-* [No data is shown in the live dashbord](./common-problems.md#no-data-is-shown-in-the-live-dashboard)
-* [Windows 10: Should I use settings windows containers or docker containers?](./common-problems.md#windows-10-should-i-use-settings-windows-containers-or-docker-containers)
-* [Help us to improve StreamPipes and this documentation](./common-problems.md#help-us-to-imrpove-streampipes-and-this-documentation)
+* Windows 10: Consul, Kafka, Zookeeper, or Kafka-Rest did not start
+* Linux / OSX: Consul does not start
+* Run StreamPipes in a VM in Windows
+* Only few processors are available in the pipeline editor
+* No data is shown in the live dashbord
+* Windows 10: Should I use settings windows containers or docker containers?
+* Help us to improve StreamPipes and this documentation
 
 ## Windows 10: Consul, Kafka, Zookeeper, or Kafka-Rest did not start
 **Problem:** You get an error message similar to: `ERROR: for consul  Cannot start service consul: b'driver failed programming external connectivity on endpoint sp-test_consul_1 (eae0457fc03c1364b8e81a6e155ca4b95ee1e1d01bb3c1aa9dd5192bdcb7b91a): Error starting userland proxy: mkdir /port/tcp:0.0.0.0:8600:tcp:172.30.0.9:8600: input/output error`
