@@ -41,5 +41,5 @@ deploy:
     - apk add --update --no-cache openssh sshpass
     - sshpass -V
     - export SSHPASS=$BOTY_PWD 
-    - sshpass -e ssh -o StrictHostKeyChecking=no boty@kalmar46.fzi.de "cd /opt/streampipes-docs-new && ./deploy.sh"
+    - sshpass -e ssh -o StrictHostKeyChecking=no boty@kalmar46.fzi.de "export DOCKER_CONFIG=/home/riemer/.docker/;cd /opt/streampipes-docs-new;./deploy.sh"
 
