@@ -10,6 +10,8 @@ stages:
 build:
   image: beevelop/nodejs-python
   stage: build
+  only: 
+    - master
   script:
     - cd website/
     - export NODE_PATH=/cache/node_modules
@@ -20,10 +22,11 @@ build:
       - website/build/streampipes-docs/**
     expire_in: 1 week
 
-
 nginx:
   image: docker:17.06.0-ce
   stage: docker
+  only: 
+    - master
   script:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $REGISTRY_HOST
     - docker build --pull --no-cache -t $IMAGE_NAME .
