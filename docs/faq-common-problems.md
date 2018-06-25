@@ -9,7 +9,7 @@ sidebar_label: Common Problems
 * [Run StreamPipes in a VM in Windows](./common-problems.md#run-streampipes-in-a-vm-in-windows)
 * [Only few processors are available in the pipeline editor](./common-problems.md#just-a-few-processors-are-available-in-the-pipeline-editor)
 * [No data is shown in the live dashbord](./common-problems.md#no-data-is-shown-in-the-live-dashboard)
-* [Windows 10: Should I use settings windows containers or docker containers?(./common-problems.md#windows-10-should-i-use-settings-windows-containers-or-docker-containers)
+* [Windows 10: Should I use settings windows containers or docker containers?](./common-problems.md#windows-10-should-i-use-settings-windows-containers-or-docker-containers)
 * [Help us to improve StreamPipes and this documentation](./common-problems.md#help-us-to-imrpove-streampipes-and-this-documentation)
 
 ## Windows 10: Consul, Kafka, Zookeeper, or Kafka-Rest did not start
