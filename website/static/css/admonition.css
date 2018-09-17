@@ -8,6 +8,11 @@
     font-size: 14px;
 }
 
+.admonition>p {
+    margin-top:1em;
+}
+
+
 .admonition .admonition, .admonition details, details .admonition, details details {
     margin: 1em 0
 }
@@ -23,6 +28,7 @@
 .admonition > .admonition-title:before, .admonition > summary:before, details > .admonition-title:before, details > summary:before {
     position: absolute;
     left: 1.2rem;
+    top:0.5rem;
     color: #448aff;
     font-size: 1.5rem;
     content: "\E3C9";

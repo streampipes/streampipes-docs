@@ -42,6 +42,13 @@ class Help extends React.Component {
                             https://github.com/streampipes/streampipes-ce
                         </a>.
                     </p>
+                    <h2>Slack</h2>
+                    <p>
+                        We'll also be glad to answer your questions, discuss use cases and exchange feedback through our Slack channel! Join us on {" "}
+                        <a href="https://slack.streampipes.org">
+                            https://slack.streampipes.org
+                        </a>.
+                    </p>
                     <h2>Twitter</h2>
                     <p>
                         For the latest news about StreamPipes,{" "}
