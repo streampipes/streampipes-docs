@@ -15,9 +15,7 @@ build:
     - dev
   script:
     - cd website/
-    - cat ./static/js/custom.js
     - echo $PRODUCTION_SCRIPT >> ./static/js/custom.js
-    - cat ./static/js/custom.js
     - export NODE_PATH=/cache/node_modules
     - npm install --unsafe-perm
     - npm run build
