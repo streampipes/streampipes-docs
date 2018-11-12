@@ -5,7 +5,7 @@ variables:
 stages:
    - build
    - docker
-   -
+   - github
    - deploy
 
 build:
