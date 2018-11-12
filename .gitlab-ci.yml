@@ -5,6 +5,7 @@ variables:
 stages:
    - build
    - docker
+   -
    - deploy
 
 build:
@@ -21,6 +22,20 @@ build:
     paths:
       - website/build/streampipes-docs/**
     expire_in: 1 week
+
+github:
+  image: maven:3-jdk-8
+  stage: github
+  script:
+    - git config --global user.email 'zehnder@fzi.de'
+    - git config --global user.name 'zehnder'
+    - git checkout $CI_COMMIT_REF_NAME
+    - git pull
+    - git remote add github https://$GITHUB_TOKEN:x-oauth-basic@git@github.com:streampipes/streampipes-docs.git
+    - git push github $CI_COMMIT_REF_NAME
+  only:
+    - dev
+    - master
 
 nginx:
   image: docker:17.06.0-ce
@@ -41,5 +56,5 @@ deploy:
     - apk add --update --no-cache openssh sshpass
     - sshpass -V
     - export SSHPASS=$BOTY_PWD 
-    - sshpass -e ssh -o StrictHostKeyChecking=no boty@kalmar46.fzi.de "export DOCKER_CONFIG=/home/riemer/.docker/;cd /opt/streampipes-docs-new;./deploy.sh"
+    - sshpass -e ssh -o StrictHostKeyChecking=no $WEBSERVER "export DOCKER_CONFIG=/home/riemer/.docker/;cd /opt/streampipes-docs-new;./deploy.sh"
 
