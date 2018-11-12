@@ -1,6 +1,7 @@
 variables:
   REGISTRY_HOST: ipe-wim-gitlab.fzi.de:5000
   IMAGE_NAME: $REGISTRY_HOST/$CI_PROJECT_PATH/$CI_COMMIT_REF_NAME
+  GIT_STRATEGY: clone
 
 stages:
    - build
