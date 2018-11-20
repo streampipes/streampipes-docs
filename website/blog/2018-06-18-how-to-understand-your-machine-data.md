@@ -2,7 +2,7 @@
 title: How to understand your machine data?
 author: Philipp Zehnder
 authorURL: http://twitter.com/philipp10der
-authorImageURL: https://www.fzi.de/fileadmin/_processed_/csm_2017-09-04_FO_Zehnder-Philipp_003_WEB_95564e4076.jpg
+authorImageURL: https://streampipes.org/images/zehnder.png
 ---
 **<div style="float: left; padding-right: 40px;">8 minutes to read</div>**
 <br>
