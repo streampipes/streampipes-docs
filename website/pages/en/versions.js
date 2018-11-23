@@ -16,11 +16,9 @@ const CWD = process.cwd();
 const siteConfig = require(`${CWD}/siteConfig.js`);
 const versions = require(`${CWD}/versions.json`);
 
-function Versions() {
+function Versions(props) {
   const latestVersion = versions[0];
-  const repoUrl = `https://github.com/${siteConfig.organizationName}/${
-    siteConfig.projectName
-  }`;
+  const repoUrl = `https://github.com/streampipes/streampipes-ce`;
   return (
     <div className="docMainWrapper wrapper">
       <Container className="mainContainer versionsContainer">
@@ -35,12 +33,10 @@ function Versions() {
               <tr>
                 <th>{latestVersion}</th>
                 <td>
-                  <a href="{`${siteConfig.baseUrl}docs/${
-                      props.language
-                    }/version-0.55.2-user-guide-introduction`}">Documentation</a>
+                  <a href={`${siteConfig.baseUrl}docs/user-guide-introduction`}>Documentation</a>
                 </td>
                 <td>
-                  <a href="">Release Notes</a>
+                  <a href={`${repoUrl}/releases/tag/${latestVersion}`}>Release Notes</a>
                 </td>
               </tr>
             </tbody>
@@ -55,7 +51,7 @@ function Versions() {
               <tr>
                 <th>master</th>
                 <td>
-                  <a href="">Documentation</a>
+                  <a href={`${siteConfig.baseUrl}docs/next/user-guide-introduction`}>Documentation</a>
                 </td>
                 <td>
                   <a href="">Release Notes</a>
@@ -73,10 +69,10 @@ function Versions() {
                     <tr>
                       <th>{version}</th>
                       <td>
-                        <a href="">Documentation</a>
+                        <a href={`${siteConfig.baseUrl}docs/${version}/user-guide-introduction`}>Documentation</a>
                       </td>
                       <td>
-                        <a href="">Release Notes</a>
+                        <a href={`${repoUrl}/releases/tag/${version}`}>Release Notes</a>
                       </td>
                     </tr>
                   ),
