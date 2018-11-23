@@ -50,7 +50,7 @@ That's it, go to the next section to learn how to create your first data stream!
 
 **Option 2: Start a new project from scratch**
 
-If you want to start from scratch, we refer to the [Sources SDK guide](source-sdk) which provides instructions on the general project setup.
+If you want to start from scratch, we refer to the [Sources SDK guide](dev-guide-processor-sdk.md) which provides instructions on the general project setup.
 
 ## Adding a data stream description
 
@@ -210,10 +210,10 @@ Click on the link of the data source to see the RDF description of the pipeline 
 <img src="/img/tutorial-sources/pe-rdf.PNG" alt="Pipeline Element RDF description">
 
 The container automatically registers itself in the Consul installation of StreamPipes.
-To install the just created element, open the StreamPipes UI and follow the manual provided in the [user guide](../user_guide/features/#install-pipeline-elements).
+To install the just created element, open the StreamPipes UI and follow the manual provided in the [user guide](user-guide-processing-elements.md).
 
 ## Read more
 
 Congratulations! You've just created your first pipeline element for StreamPipes.
 There are many more things to explore and data sources can be defined in much more detail.
-Follow our [SDK guide](source-sdk) to see what's possible!
+Follow our [SDK guide](dev-guide-source-sdk.md) to see what's possible!

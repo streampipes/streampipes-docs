@@ -4,151 +4,43 @@
     "next": "Next",
     "previous": "Previous",
     "tagline": "Self-Service Data Analytics",
-    "docs": {
-      "dev-guide-architecture": {
-        "title": "Architecture",
-        "sidebar_label": "Architecture"
-      },
-      "dev-guide-development-environment": {
-        "title": "Development Environment",
-        "sidebar_label": "Development Environment"
-      },
-      "dev-guide-introduction": {
-        "title": "Introduction",
-        "sidebar_label": "Introduction"
-      },
-      "dev-guide-sdk-guide-processors": {
-        "title": "SDK Guide Processors",
-        "sidebar_label": "SDK Guide Processors"
-      },
-      "dev-guide-sdk-guide-sinks": {
-        "title": "SDK Guide Sinks",
-        "sidebar_label": "SDK Guide Sinks"
-      },
-      "dev-guide-sdk-guide-sources": {
-        "title": "SDK Guide Sources",
-        "sidebar_label": "SDK Guide Sources"
-      },
-      "dev-guide-tutorial-processors": {
-        "title": "Tutorial: Data Processors",
-        "sidebar_label": "Tutorial: Data Processors"
-      },
-      "dev-guide-tutorial-sources": {
-        "title": "Tutorial: Data Sources",
-        "sidebar_label": "Tutorial: Data Sources"
-      },
-      "faq-common-problems": {
-        "title": "Common Problems",
-        "sidebar_label": "Common Problems"
-      },
-      "license": {
-        "title": "license"
-      },
-      "privacy": {
-        "title": "Datenschutzerklärung",
-        "sidebar_label": "Privacy Notice"
-      },
-      "user-guide-getting-started": {
-        "title": "Getting Started",
-        "sidebar_label": "Getting Started"
-      },
-      "user-guide-installation": {
-        "title": "Installation",
-        "sidebar_label": "Installation"
-      },
-      "user-guide-introduction": {
-        "title": "Introduction",
-        "sidebar_label": "Introduction"
-      },
-      "user-guide-processing-elements": {
-        "title": "Processing Elements",
-        "sidebar_label": "Processing Elements"
-      },
-      "user-guide-software-components": {
-        "title": "Software Components",
-        "sidebar_label": "Software Components"
-      },
-      "user-guide-tour": {
-        "title": "Tour",
-        "sidebar_label": "Tour"
-      },
-      "version-0.55.2-dev-guide-architecture": {
-        "title": "Architecture",
-        "sidebar_label": "Architecture"
-      },
-      "version-0.55.2-dev-guide-development-environment": {
-        "title": "Development Environment",
-        "sidebar_label": "Development Environment"
-      },
-      "version-0.55.2-dev-guide-introduction": {
-        "title": "Introduction",
-        "sidebar_label": "Introduction"
-      },
-      "version-0.55.2-dev-guide-sdk-guide-processors": {
-        "title": "SDK Guide Processors",
-        "sidebar_label": "SDK Guide Processors"
-      },
-      "version-0.55.2-dev-guide-sdk-guide-sinks": {
-        "title": "SDK Guide Sinks",
-        "sidebar_label": "SDK Guide Sinks"
-      },
-      "version-0.55.2-dev-guide-sdk-guide-sources": {
-        "title": "SDK Guide Sources",
-        "sidebar_label": "SDK Guide Sources"
-      },
-      "version-0.55.2-dev-guide-tutorial-processors": {
-        "title": "Tutorial: Data Processors",
-        "sidebar_label": "Tutorial: Data Processors"
-      },
-      "version-0.55.2-dev-guide-tutorial-sources": {
-        "title": "Tutorial: Data Sources",
-        "sidebar_label": "Tutorial: Data Sources"
-      },
-      "version-0.55.2-faq-common-problems": {
-        "title": "Common Problems",
-        "sidebar_label": "Common Problems"
-      },
-      "version-0.55.2-privacy": {
-        "title": "Datenschutzerklärung",
-        "sidebar_label": "Privacy Notice"
-      },
-      "version-0.55.2-user-guide-getting-started": {
-        "title": "Getting Started",
-        "sidebar_label": "Getting Started"
-      },
-      "version-0.55.2-user-guide-installation": {
-        "title": "Installation",
-        "sidebar_label": "Installation"
-      },
-      "version-0.55.2-user-guide-introduction": {
-        "title": "Introduction",
-        "sidebar_label": "Introduction"
-      },
-      "version-0.55.2-user-guide-processing-elements": {
-        "title": "Processing Elements",
-        "sidebar_label": "Processing Elements"
-      },
-      "version-0.55.2-user-guide-software-components": {
-        "title": "Software Components",
-        "sidebar_label": "Software Components"
-      },
-      "version-0.55.2-user-guide-tour": {
-        "title": "Tour",
-        "sidebar_label": "Tour"
-      }
-    },
-    "links": {
-      "User Guide": "User Guide",
-      "Developer Guide": "Developer Guide",
-      "FAQ": "FAQ",
-      "Blog": "Blog",
-      "Community": "Community"
-    },
-    "categories": {
-      "User Guide": "User Guide",
-      "Developer Guide": "Developer Guide",
-      "FAQ": "FAQ"
-    }
+    "dev-guide-architecture": "Architecture",
+    "Architecture": "Architecture",
+    "dev-guide-development-environment": "Development Environment",
+    "Development Environment": "Development Environment",
+    "dev-guide-introduction": "Introduction",
+    "Introduction": "Introduction",
+    "dev-guide-sdk-guide-processors": "SDK Guide Processors",
+    "SDK Guide Processors": "SDK Guide Processors",
+    "dev-guide-sdk-guide-sinks": "SDK Guide Sinks",
+    "SDK Guide Sinks": "SDK Guide Sinks",
+    "dev-guide-sdk-guide-sources": "SDK Guide Sources",
+    "SDK Guide Sources": "SDK Guide Sources",
+    "dev-guide-tutorial-processors": "Tutorial: Data Processors",
+    "Tutorial: Data Processors": "Tutorial: Data Processors",
+    "dev-guide-tutorial-sources": "Tutorial: Data Sources",
+    "Tutorial: Data Sources": "Tutorial: Data Sources",
+    "faq-common-problems": "Common Problems",
+    "Common Problems": "Common Problems",
+    "license": "license",
+    "privacy": "Datenschutzerklärung",
+    "Privacy Notice": "Privacy Notice",
+    "user-guide-getting-started": "Getting Started",
+    "Getting Started": "Getting Started",
+    "user-guide-installation": "Installation",
+    "Installation": "Installation",
+    "user-guide-introduction": "Introduction",
+    "user-guide-processing-elements": "Processing Elements",
+    "Processing Elements": "Processing Elements",
+    "user-guide-software-components": "Software Components",
+    "Software Components": "Software Components",
+    "user-guide-tour": "Tour",
+    "Tour": "Tour",
+    "User Guide": "User Guide",
+    "Developer Guide": "Developer Guide",
+    "FAQ": "FAQ",
+    "Blog": "Blog",
+    "Community": "Community"
   },
   "pages-strings": {
     "Help Translate|recruit community translators for your project": "Help Translate",

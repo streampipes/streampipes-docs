@@ -55,7 +55,7 @@ Rename the classes (or create new classes by copying these files) as follows:
 
 **Option 2: Start a new project from scratch**
 
-If you want to start from scratch, we refer to the [Processor SDK guide](processor-sdk) which provides instructions on the general project setup.
+If you want to start from scratch, we refer to the [Test Processor SDK guide](dev-guide-processor-sdk.md) which provides instructions on the general project setup.
 
 ## Adding data processor requirements
 
