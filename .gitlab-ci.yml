@@ -10,7 +10,7 @@ stages:
    - deploy
 
 build:
-  image: beevelop/nodejs-python
+  image: node:8.12.0-jessie
   stage: build
   only: 
     - master
