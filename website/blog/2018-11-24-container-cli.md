@@ -59,7 +59,7 @@ With this command, all services defined in the template are written to the activ
 
 The last file is the tmpl_env file.
 It contains configuration variables for the individual services.
-Those variables can also be changed by the bash script dynamically, because the env_template file is moved to the .env file in the same folder.
+Those variables can also be changed by the bash script dynamically, because the tmpl_env file is moved to the .env file in the same folder.
 We use the configuration for example to dynamically set the IP Address of the host system or set the application version.
 To use a variable in a docker-compose file just write it in braces, as shown below.
 
