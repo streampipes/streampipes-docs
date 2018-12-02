@@ -143,10 +143,10 @@ Instead of starting from scratch, we recommend using either one of our sample pr
 We provide basic skeletons for defining data sources, data processors and data sinks in form of sample projects.
 These are available on Github as defined below. Just clone the project and change the corresponding groupId and artifactId as you like.
 
-*   templates-sources (https://github.com/streampipes/templates-sources)
+*   templates-sources (https://github.com/streampipes/templates-sources) <!-- Link does not work -->
     This sample project can be used to connect new data streams with StreamPipes.
 
-*   templates-flink (https://github.com/streampipes/templates-flink)
+*   templates-flink (https://github.com/streampipes/templates-flink) <!-- Link does not work -->
     This sample project can be used to define new data processors and data sinks for StreamPipes that are executed in an Apache Flink cluster.
 
 ### Maven archetypes

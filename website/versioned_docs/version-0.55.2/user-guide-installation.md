@@ -68,4 +68,4 @@ In the desktop version, only a limited amount of processors is available to ensu
 
 After installing it, open your browser and navigate to `localhost`.
 
-Now you can continue with the tutorial on page [Getting Started](getting-started.md).
+Now you can continue with the tutorial on page [Getting Started](user-guide-getting-started.md).

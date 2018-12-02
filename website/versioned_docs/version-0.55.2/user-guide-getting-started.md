@@ -219,5 +219,5 @@ It is recommended to stop the last pipeline, because it will keep creating notif
 
 We hope we gave you an easy quick start into StreamPipes.
 If you have any questions or suggestions, just send us an email.
-From here on you can explore all features in the [User Guide](/user_guide/introduction.md) or go to the [Developer Guide](/developer_guide/introduction.md) to learn how to write your own StreamPipes processing elements.
+From here on you can explore all features in the [User Guide](user-guide-introduction.md) or go to the [Developer Guide](dev-guide-introduction.md) to learn how to write your own StreamPipes processing elements.
 

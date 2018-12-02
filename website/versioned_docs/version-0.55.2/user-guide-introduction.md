@@ -58,5 +58,5 @@ After importing newly developed pipeline elements, they are available to all use
 
 
 ## Next Steps
-To test StreamPipes on your local environment go to the [installation guide](../quick_start/installation.md).
-If you are further interested in the concepts of StreamPipes continue with the [tour](features.md).
+To test StreamPipes on your local environment go to the [installation guide](user-guide-installation.md).
+If you are further interested in the concepts of StreamPipes continue with the [tour](user-guide-tour.md).

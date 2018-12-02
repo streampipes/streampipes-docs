@@ -30,7 +30,7 @@ Currently, there are two options to start a new project (option 1 is recommended
 
 **Option 1: Using a template project**
 
-Clone the following project from our Github repo: https://github.com/streampipes/templates-sources
+Clone the following project from our Github repo: https://github.com/streampipes/templates-sources <!-- Link does not work -->
 
 Import the project into an IDE of your choice.
 You should see a structure like this:

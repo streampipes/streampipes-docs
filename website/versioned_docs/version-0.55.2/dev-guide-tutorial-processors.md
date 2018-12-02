@@ -10,7 +10,7 @@ In this tutorial, we will add a new data processor using the Apache Flink wrappe
 From an architectural point of view, we will create a self-contained service that includes the description of the data processor and a Flink-compatible implementation.
 Once a pipeline is started that uses this data processor, the implementation is submitted to an Apache Flink cluster.
 
-If this is the first time you are extending StreamPipes, we recommend doing the [data source tutorial](tutorial-sources) first.
+If this is the first time you are extending StreamPipes, we recommend doing the [data source tutorial](dev-guide-tutorial-sources.md) first.
 
 ## Objective
 
@@ -56,7 +56,7 @@ Rename the classes (or create new classes by copying these files) as follows:
 
 **Option 2: Start a new project from scratch**
 
-If you want to start from scratch, we refer to the [Processor SDK guide](processor-sdk) which provides instructions on the general project setup.
+If you want to start from scratch, we refer to the [Processor SDK guide](dev-guide-processor-sdk.md) which provides instructions on the general project setup.
 
 ## Adding data processor requirements
 
@@ -131,7 +131,7 @@ In addition, we can assign a _value specification_ to the parameter indicating t
 Our example supports a radius value between 0 and 1000 with a granularity of 1.
 In the StreamPipes UI, a required text parameter is rendered as a text input field, in case we provide an optional value specification, a slider input is automatically generated.
 
-Such user-defined parameters are called _static properties_. There are many different types of static properties (see the [Processor SDK](processor-sdk) for an overview).
+Such user-defined parameters are called _static properties_. There are many different types of static properties (see the [Processor SDK](dev-guide-processor-sdk.md) for an overview).
 
 One example are _DomainProperties_ we use for defining the center of the geofence.
 Our data processor requires a lat/lng pair that marks the center of the geofence.
@@ -469,10 +469,10 @@ Click on the link of the data source to see the RDF description of the pipeline 
 <img src="/img/tutorial-processors/pe-rdf-geofencing.PNG" alt="Geofencing RDF description">
 
 The container automatically registers itself in the Consul installation of StreamPipes.
-To install the just created element, open the StreamPipes UI and follow the manual provided in the [user guide](../user_guide/features/#install-pipeline-elements).
+To install the just created element, open the StreamPipes UI and follow the manual provided in the [user guide](user-guide-processing-elements.md).
 
 ## Read more
 
 Congratulations! You've just created your first data processor for StreamPipes.
 There are many more things to explore and data processors can be defined in much more detail using multiple wrappers.
-Follow our [SDK guide](processor-sdk) to see what's possible!
+Follow our [SDK guide](dev-guide-source-sdk.md) to see what's possible!

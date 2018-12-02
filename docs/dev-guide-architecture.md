@@ -27,7 +27,7 @@ StreamPipes does not rely on a specific broker or message format, but negotiates
 Thus, StreamPipes provides a higher-level abstraction of existing stream processing technology by leveraging domain experts to create streaming analytics pipelines in a self-service manner.
 
 ## Semantic description
-Pipeline elements in StreamPipes are meant to be resuable:
+Pipeline elements in StreamPipes are meant to be reusable:
 
 * Data processors and data sink are generic (or domain-specific) elements that express their requirements and are able to operate on any stream that satisfies these requirements.
 * Data processors and data sinks can be manually configured by offering possible configuration parameters which users can individually define when creating pipelines.
