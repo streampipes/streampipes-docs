@@ -9,6 +9,10 @@
         "title": "Architecture",
         "sidebar_label": "Architecture"
       },
+      "dev-guide-configuration": {
+        "title": "Configuration",
+        "sidebar_label": "Configuration"
+      },
       "dev-guide-development-environment": {
         "title": "Development Environment",
         "sidebar_label": "Development Environment"
