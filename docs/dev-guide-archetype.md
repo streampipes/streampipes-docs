@@ -1,15 +1,16 @@
 ---
-id: dev-guide-sdk-guide-processors
-title: SDK Guide Processors
-sidebar_label: SDK Guide Processors
+id: dev-guide-archetype
+title: Start Developing
+sidebar_label: Start Developing
 ---
 
 In this tutorial we explain how you can use the Maven archetypes to develop your own StreamPipes processors and sinks.
 We explain some steps with IntelliJ, but this works with any IDE of your choice.
 
 ## Prerequisites
-You need a up and running StreamPipes installation on your development computer and Maven installed.
-TODO: Install env Plugin
+You need to have Maven installed, further you need a up and running StreamPipes installation on your development computer.
+To ease the configuration of environment variables we use the IntelliJ [env Plugin](https://plugins.jetbrains.com/plugin/7861-envfile).
+Install this in IntelliJ. The development also works without the plugin, then you have to set the environment variables manually.
 
 ## Create Project
 To create a new project we provide Maven Archteypes.
@@ -26,7 +27,7 @@ mvn archetype:generate                              	 	     \
   -DarchetypeVersion=0.60.1
 ```
 <details class="info">
-<summary>Select: [Processors / Sinks] [JVM / Flink]</summary>
+    <summary>Select: [Processors / Sinks] [JVM / Flink]</summary>
 
 ## Processors JVM
 ```bash
@@ -101,23 +102,25 @@ Switch to the tab *EnvFile* and select the env file you just have changed.
 Save all the changes by clicking Apply.
 Then you can start the processor.
 
-[TODO images]
+<div class="my-carousel">
+    <img src="/img/archetype/run_configuration.png" alt="Configuration View">
+    <img src="/img/archetype/run_env_configuration.png" alt="Environment Configuration View">
+</div>
 
 To check if the service is up and running open the browser on *'localhost:8090'*, there the description of the processor should be visible as shown below.
 
-[TODO image]
+<img src="/img/archetype/endpoint.png" width="80%" alt="Project Structure">
 
 Now you can go to StreamPipes.
 Your new processor *'Example'* should now show up in the installation menu. Install it.
 
-If not. Click on 'MANAGE ENDPOINTS' and add 'http://YOUR_IP_OR_DNS_NAME:8090'.
+If not. Click on 'MANAGE ENDPOINTS' and add 'http://<span></span>YOUR_IP_OR_DNS_NAME:8090'.
 Use the IP or DNS name you provided in the env file.
 After adding the endpoint a new processor with the name *Example* should show up.
 
 Switch to the pipeline view and create a simple pipeline with your processor in the middle.
 
-[TODO image]
-
+<img src="/img/archetype/example_pipeline.png" width="80%" alt="Project Structure">
 
 Start this pipeline.
 Now you should see logging messages in your console and when you create a visualisation you can see the resulting events of your component.
