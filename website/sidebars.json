@@ -3,7 +3,7 @@
     "User Guide": ["user-guide-introduction", "user-guide-getting-started", "user-guide-installation", "user-guide-tour", "user-guide-processing-elements", "user-guide-software-components"]
   },
   "developer-guide": {
-    "Developer Guide": ["dev-guide-introduction", "dev-guide-archetype", "dev-guide-architecture", "dev-guide-development-environment", "dev-guide-tutorial-sources", "dev-guide-tutorial-processors", "dev-guide-sdk-guide-sources", "dev-guide-sdk-guide-processors", "dev-guide-sdk-guide-sinks", "dev-guide-configuration"]
+    "Developer Guide": ["dev-guide-introduction", "dev-guide-architecture", "dev-guide-development-environment", "dev-guide-archetype", "dev-guide-tutorial-sources", "dev-guide-tutorial-processors", "dev-guide-sdk-guide-sources", "dev-guide-sdk-guide-processors", "dev-guide-sdk-guide-sinks", "dev-guide-configuration"]
   },
   "faq": {
     "FAQ": ["faq-common-problems"]
