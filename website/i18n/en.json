@@ -5,6 +5,10 @@
     "previous": "Previous",
     "tagline": "Self-Service Data Analytics",
     "docs": {
+      "dev-guide-archetype": {
+        "title": "Start Developing",
+        "sidebar_label": "Start Developing"
+      },
       "dev-guide-architecture": {
         "title": "Architecture",
         "sidebar_label": "Architecture"
