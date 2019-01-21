@@ -45,7 +45,7 @@ mvn archetype:generate                              	 	     \
 ```bash
 mvn archetype:generate                              	 	     \
   -DarchetypeGroupId=org.streampipes          			         \
-  -DarchetypeArtifactId=streampipes-archetype-pe-processors-jvm  \
+  -DarchetypeArtifactId=streampipes-archetype-pe-processors-flink  \
   -DarchetypeVersion=0.60.1
 ```
 
@@ -53,7 +53,7 @@ mvn archetype:generate                              	 	     \
 ```bash
 mvn archetype:generate                              	 	     \
   -DarchetypeGroupId=org.streampipes          			         \
-  -DarchetypeArtifactId=streampipes-archetype-pe-processors-jvm  \
+  -DarchetypeArtifactId=streampipes-archetype-pe-sinks-jvm  \
   -DarchetypeVersion=0.60.1
 ```
 
@@ -61,7 +61,7 @@ mvn archetype:generate                              	 	     \
 ```bash
 mvn archetype:generate                              	 	     \
   -DarchetypeGroupId=org.streampipes          			         \
-  -DarchetypeArtifactId=streampipes-archetype-pe-processors-jvm  \
+  -DarchetypeArtifactId=streampipes-archetype-pe-sinks-flink  \
   -DarchetypeVersion=0.60.1
 ```
 </details>
