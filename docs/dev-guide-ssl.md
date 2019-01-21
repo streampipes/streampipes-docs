@@ -18,7 +18,7 @@ Finally you have to inject the Certificates into the Docker-Container. In the ex
 ```yaml
 [...]
   nginx:
-    image: ipe-wim-gitlab.fzi.de:5000/streampipes/ui/dev
+    image: streampipes/ui
     ports:
       - "80:80"
       - "443:443"
