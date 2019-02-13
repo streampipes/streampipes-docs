@@ -25,6 +25,10 @@
         "title": "Introduction",
         "sidebar_label": "Introduction"
       },
+      "dev-guide-migration": {
+        "title": "Migration Guide v0.61",
+        "sidebar_label": "Migration Guide"
+      },
       "dev-guide-sdk-guide-processors": {
         "title": "SDK Guide Processors",
         "sidebar_label": "SDK Guide Processors"
