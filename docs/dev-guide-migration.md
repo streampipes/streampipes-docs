@@ -9,35 +9,14 @@ Version 0.61.0 of StreamPipes comes with an improved event model. This model mak
 If you are only using the pipeline elements that are included in StreamPipes, you only need to update the element description (My Elements -> Update).
 However, if you've already developed your own pipeline elements, some code changes are required to make your elements work with versions >= 0.61.0.
 
+<div class="admonition info">
+<div class="admonition-title">Don't be afraid!</div>
+<p>Although this guide may look long and complicated, migrating pipeline elements is quite simple. Once you've understood how the new event model works, you'll be able to migrate an element within just a few minutes.</p>
+</div>
+
 ## Migrating Data Processors
 
 ### JVM Wrapper
-
-#### Controller
-
-1. In the ``onInvocation`` method, use a method reference instead of the lambda expression as return type:
-
-```java
-// old
-return new ConfiguredEventProcessor<>(params, () -> new MyProcessor(params));
-
-// new
-return new ConfiguredEventProcessor<>(params, MyProcessor::new);
-```
-
-2. Change the signature of the ``onInvocation`` method:
-
-```java
-// old
-  @Override
-  public ConfiguredEventProcessor<MyParameters> onInvocation(DataProcessorInvocation graph) { ... }
-
-// new
-  @Override
-  public ConfiguredEventProcessor<MyParameters> onInvocation(DataProcessorInvocation graph, ProcessingElementParameterExtractor extractor) { ... }
-```
-
-3. If existing, remove the ``fromExtractor`` method and use the provided ``ProcessingElementParameterExtractor``
 
 #### Engine Class
 
@@ -123,6 +102,33 @@ See the documentation on the event class for further details.
     out.collect(in);
   }
 ```
+
+#### Controller
+
+1. In the ``onInvocation`` method, use a method reference instead of the lambda expression as return type:
+
+```java
+// old
+return new ConfiguredEventProcessor<>(params, () -> new MyProcessor(params));
+
+// new
+return new ConfiguredEventProcessor<>(params, MyProcessor::new);
+```
+
+2. Change the signature of the ``onInvocation`` method:
+
+```java
+// old
+  @Override
+  public ConfiguredEventProcessor<MyParameters> onInvocation(DataProcessorInvocation graph) { ... }
+
+// new
+  @Override
+  public ConfiguredEventProcessor<MyParameters> onInvocation(DataProcessorInvocation graph, ProcessingElementParameterExtractor extractor) { ... }
+```
+
+3. If existing, remove the ``fromExtractor`` method and use the provided ``ProcessingElementParameterExtractor``
+
 
 ### Flink Wrapper
 
