@@ -134,3 +134,59 @@ return new ConfiguredEventProcessor<>(params, MyProcessor::new);
 
 
 ## Migrating Data Sinks
+
+### JVM Wrapper
+
+#### Sink Class
+
+1. Make the class **implement** ``EventSink`` instead of **extending** ``EventSink``
+
+```java
+// old
+public class MySink extends EventSink<MySinkParameters> { ... }
+
+// new
+public class MySink implements EventSink<MySinkParameters>{ ... }
+```
+
+2. If present, remove the constructor that includes the parameter class.
+
+3. Change the ``bind`` method to ``onInvocation`` as follows:
+
+```java
+// old
+  @Override
+  public void bind(DemonstratorValveParameters parameters) throws SpRuntimeException { ... }
+
+// new
+  @Override
+  public void onInvocation(DemonstratorValveParameters parameters, EventSinkRuntimeContext runtimeContext) throws SpRuntimeException { ... }
+```
+
+4. Change the signature of the ``onEvent`` method
+
+```java
+// old
+  @Override
+  public void onEvent(Map<String, Object> event, String sourceInfo) {
+
+// new
+  @Override
+  public void onEvent(Event event) {
+```
+
+5. If necessary, adapt your logic to use the new event object.
+
+6. Rename the ``discard`` method to ``onDetach``.
+
+#### Controller
+
+1. In the ``onInvocation`` method, use a method reference instead of the lambda expression as return type:
+
+```java
+// old
+return new ConfiguredEventSink<>(params, () -> new MySink(params));
+
+// new
+return new ConfiguredEventSink<>(params, MySink::new);
+```
