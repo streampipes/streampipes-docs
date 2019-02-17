@@ -1,7 +1,7 @@
 ---
 id: dev-guide-sdk-guide-sources
-title: SDK Guide Sources
-sidebar_label: SDK Guide Sources
+title: SDK Guide: Data Sources
+sidebar_label: SDK Guide: Data Sources
 ---
 
 ## Project Setup

@@ -1,7 +1,7 @@
 ---
 id: dev-guide-sdk-guide-sinks
-title: SDK Guide Sinks
-sidebar_label: SDK Guide Sinks
+title: SDK Guide: Data Sinks
+sidebar_label: SDK Guide: Data Sinks
 ---
 
 ## Project Setup

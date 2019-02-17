@@ -21,6 +21,10 @@
         "title": "Development Environment",
         "sidebar_label": "Development Environment"
       },
+      "dev-guide-event-model": {
+        "title": "SDK Guide: Event Model",
+        "sidebar_label": "SDK Guide: Event Model"
+      },
       "dev-guide-introduction": {
         "title": "Introduction",
         "sidebar_label": "Introduction"
@@ -29,21 +33,33 @@
         "title": "Migration Guide v0.61",
         "sidebar_label": "Migration Guide"
       },
+      "dev-guide-output-strategies": {
+        "title": "SDK Guide: Output Strategies",
+        "sidebar_label": "SDK Guide: Output Strategies"
+      },
       "dev-guide-sdk-guide-processors": {
-        "title": "SDK Guide Processors",
-        "sidebar_label": "SDK Guide Processors"
+        "title": "SDK Guide: Data Processors",
+        "sidebar_label": "SDK Guide: Data Processors"
       },
       "dev-guide-sdk-guide-sinks": {
-        "title": "SDK Guide Sinks",
-        "sidebar_label": "SDK Guide Sinks"
+        "title": "SDK Guide: Data Sinks",
+        "sidebar_label": "SDK Guide: Data Sinks"
       },
       "dev-guide-sdk-guide-sources": {
-        "title": "SDK Guide Sources",
-        "sidebar_label": "SDK Guide Sources"
+        "title": "SDK Guide: Data Sources",
+        "sidebar_label": "SDK Guide: Data Sources"
       },
       "dev-guide-ssl": {
         "title": "Use SSL",
         "sidebar_label": "Use SSL"
+      },
+      "dev-guide-static-properties": {
+        "title": "SDK Guide: Static Properties",
+        "sidebar_label": "SDK Guide: Static Properties"
+      },
+      "dev-guide-stream-requirements": {
+        "title": "SDK Guide: Stream Requirements",
+        "sidebar_label": "SDK Guide: Stream Requirements"
       },
       "dev-guide-tutorial-processors": {
         "title": "Tutorial: Data Processors",
@@ -162,8 +178,12 @@
     },
     "categories": {
       "User Guide": "User Guide",
-      "Developer Guide": "Developer Guide",
-      "FAQ": "FAQ"
+      "Basics": "Basics",
+      "Tutorials": "Tutorials",
+      "SDK Reference": "SDK Reference",
+      "Configuration": "Configuration",
+      "FAQ": "FAQ",
+      "Developer Guide": "Developer Guide"
     }
   },
   "pages-strings": {

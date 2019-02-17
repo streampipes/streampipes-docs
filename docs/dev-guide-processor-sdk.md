@@ -1,7 +1,7 @@
 ---
 id: dev-guide-sdk-guide-processors
-title: SDK Guide Processors
-sidebar_label: SDK Guide Processors
+title: SDK Guide: Data Processors
+sidebar_label: SDK Guide: Data Processors
 ---
 
 ## Project Setup

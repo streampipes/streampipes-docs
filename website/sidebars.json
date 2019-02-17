@@ -1,9 +1,38 @@
 {
   "user-guide": {
-    "User Guide": ["user-guide-introduction", "user-guide-getting-started", "user-guide-installation", "user-guide-tour", "user-guide-processing-elements", "user-guide-software-components"]
+    "User Guide": [
+      "user-guide-introduction",
+      "user-guide-getting-started",
+      "user-guide-installation",
+      "user-guide-tour",
+      "user-guide-processing-elements",
+      "user-guide-software-components"]
   },
   "developer-guide": {
-    "Developer Guide": ["dev-guide-introduction", "dev-guide-migration", "dev-guide-architecture", "dev-guide-development-environment", "dev-guide-archetype", "dev-guide-ssl", "dev-guide-tutorial-sources", "dev-guide-tutorial-processors", "dev-guide-sdk-guide-sources", "dev-guide-sdk-guide-processors", "dev-guide-sdk-guide-sinks", "dev-guide-configuration"]
+    "Basics": [
+      "dev-guide-introduction",
+      "dev-guide-migration",
+      "dev-guide-architecture",
+      "dev-guide-development-environment",
+      "dev-guide-archetype"
+      ],
+    "Tutorials": [
+      "dev-guide-tutorial-sources",
+      "dev-guide-tutorial-processors"
+    ],
+    "SDK Reference": [
+      "dev-guide-sdk-guide-sources",
+      "dev-guide-sdk-guide-processors",
+      "dev-guide-sdk-guide-sinks",
+      "dev-guide-stream-requirements",
+      "dev-guide-static-properties",
+      "dev-guide-output-strategies",
+      "dev-guide-event-model"
+     ],
+    "Configuration": [
+      "dev-guide-ssl",
+      "dev-guide-configuration"
+    ]
   },
   "faq": {
     "FAQ": ["faq-common-problems"]
