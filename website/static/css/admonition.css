@@ -2,7 +2,7 @@
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12), 0 3px 1px -2px rgba(0, 0, 0, .2);
     position: relative;
     margin: 1.5625em 0;
-    padding: 1.2rem;
+    padding: 0.6rem 0.6rem 0.25rem;
     border-left: .4rem solid #448aff;
     border-radius: .2rem;
     font-size: 14px;
@@ -18,7 +18,7 @@
 }
 
 .admonition > .admonition-title, .admonition > summary, details > .admonition-title, details > summary {
-    margin: -1.2rem -1.2rem 0;
+    margin: -0.6rem -0.6rem 0;
     padding: .8rem 1.2rem .8rem 4rem;
     border-bottom: .1rem solid rgba(68, 138, 255, .1);
     background-color: rgba(68, 138, 255, .1);
@@ -28,7 +28,7 @@
 .admonition > .admonition-title:before, .admonition > summary:before, details > .admonition-title:before, details > summary:before {
     position: absolute;
     left: 1.2rem;
-    top:0.5rem;
+    top:0.25rem;
     color: #448aff;
     font-size: 1.5rem;
     content: "\E3C9";
