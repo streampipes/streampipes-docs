@@ -19,7 +19,7 @@ build:
     - cd website/
     - echo $PRODUCTION_SCRIPT >> ./static/js/custom.js
     - export NODE_PATH=/cache/node_modules
-    - npm cache verify
+    - npm cache clean --force
     - npm install --unsafe-perm
     - npm run build
   artifacts:
