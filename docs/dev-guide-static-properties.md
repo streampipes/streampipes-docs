@@ -17,7 +17,7 @@ The following reference describes how static properties can be defined using the
 
 ## Reference
 
-The methods described above to create static properties are available in the ``ProcessingElementBuilder`` and ``DataSinkBuilder`` classes and are usually used in the ``declareModel`` method of the controller class.
+The methods described below to create static properties are available in the ``ProcessingElementBuilder`` and ``DataSinkBuilder`` classes and are usually used in the ``declareModel`` method of the controller class.
 
 ### Mapping property
 
@@ -51,7 +51,7 @@ String mappingPropertySelector = extractor.mappingPropertyValue("mp-key");
 
 Note that this method returns a ``PropertySelector``, which can be used by the event model to extract the actual value of this field.
 
-#### N-ary mapping property
+### N-ary mapping property
 
 N-ary mapping properties work similar to unary mapping properties, but allow the mapping of one requirement to multiple event properties matching the requirement:
 
