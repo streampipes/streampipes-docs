@@ -6,7 +6,7 @@ sidebar_label: Software Components
 
 This page contains all the software components that can be used within the StreamPipes framework.
 Some of them are mandatory but others are just necessary for a special capabilities.
-In the [Installation Guide](../quick_start/installation.md#installation_1) we  already provide a docker-compose.yml file with all the necessary components 
+In the [Installation Guide](user-guide-installation.md#installation_1) we  already provide a docker-compose.yml file with all the necessary components
 for a minimal setup.
 Extend this configuration files with further containers described on this page and configure StreamPipes
 according to your needs.

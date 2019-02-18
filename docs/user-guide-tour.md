@@ -38,7 +38,7 @@ This is one of the central features of StreamPipes, since graphical modeling of 
 
 On the top we can see three tabs: __Data Streams__, __Processing Elements__, and __Data Sinks__.
 Each tab contains multiple pipeline elements, which can be installed at runtime.
-The installation of pipeline elements is explained later in section ![Install Pipeline Elements](user_guide/features.md#install-pipeline-elements).
+The installation of pipeline elements is explained later in section [Install Pipeline Elements](user-guide-tour.md#install-pipeline-elements).
 
 <div class="my-carousel">
     <img src="/img/features/editor/1_data_streams.png" alt="Data Streams">
