@@ -85,9 +85,12 @@ class HomeSplash extends React.Component {
                 <Logo img_src={imgUrl('logo.png')}/>
                 <div className="inner">
                     <ProjectTitle/>
+                    <h4 style={{color:'rgb(27, 20, 100)'}}>A complete toolbox to easily analyze IoT data streams without programming skills.</h4>
                     <PromoSection>
                         <Button href={docUrl('user-guide-tour.html', language)}>View the tour</Button>
-                        <Button href={docUrl('user-guide-installation.html', language)}>InstallatioN Guide</Button>
+                        <Button href={docUrl('user-guide-installation.html', language)}>Installation Guide</Button>
+                        <Button href={'https://www.github.com/streampipes/streampipes-ce'}><i
+                            className="fab fa-github"></i>&nbsp;View on Github</Button>
                     </PromoSection>
                     <ScreenshotSection screenshot_src={imgUrl('streampipes-screenshot.png')}/>
                 </div>

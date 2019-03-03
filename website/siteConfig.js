@@ -103,7 +103,8 @@ const siteConfig = {
         'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css',
         'https://fonts.googleapis.com/css?family=Roboto',
         '/css/admonition.css',
-        '/css/code-block-buttons.css'],
+        '/css/code-block-buttons.css',
+        'https://use.fontawesome.com/releases/v5.7.2/css/all.css'],
 
     /* On page navigation for the current documentation page */
     onPageNav: 'separate',

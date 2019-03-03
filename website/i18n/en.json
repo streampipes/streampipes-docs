@@ -59,7 +59,7 @@
       },
       "dev-guide-stream-requirements": {
         "title": "SDK Guide: Stream Requirements",
-        "sidebar_label": "SDK Guide: Stream Requirements"
+        "sidebar_label": "Stream Requirements"
       },
       "dev-guide-tutorial-processors": {
         "title": "Tutorial: Data Processors",
