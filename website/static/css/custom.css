@@ -60,11 +60,13 @@ p {
 
 .screenshot {
     margin-top: 25pt;
-    max-width: 800px;
+    max-width: 900px;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 .sp-background {
-    background-color: rgba(238, 238, 238, 0.6);
+    background-color: rgba(255, 255, 255, 0.6);
     background-image: linear-gradient(90deg, rgba(216, 216, 216, 0.3) 10%, transparent 0%), linear-gradient(rgba(216, 216, 216, .3) 10%, transparent 0%);
     background-size: 15px 15px;
 }
@@ -88,3 +90,13 @@ p {
     color:#39b54a;
 }
 
+.blockElement {
+    border: 3px solid rgb(27, 20, 100);
+    border-radius: 5px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.imageAlignTop .blockImage {
+    max-width:110px;
+}

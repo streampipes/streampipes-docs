@@ -59,7 +59,16 @@ const Logo = props => (
 
 const ScreenshotSection = props => (
     <div>
-        <img src={props.screenshot_src} className="screenshot"/>
+        {/*<img src={props.screenshot_src} className="screenshot"/>*/}
+        <div className="title-carousel screenshot">
+            <img src={imgUrl('slideshow/slideshow-pipeline.png')} alt="Pipeline"/>
+            <img src={imgUrl('slideshow/slideshow-config.png')} alt="Pipeline Config"/>
+            <img src={imgUrl('slideshow/slideshow-connect.png')} alt="StreamPipes Connect"/>
+            <img src={imgUrl('slideshow/slideshow-dashboard.png')} alt="Dashboard"/>
+            <img src={imgUrl('slideshow/slideshow-recommendation.png')} alt="Element Recommendation"/>
+            <img src={imgUrl('slideshow/slideshow-installation.png')} alt="Pipeline Element Installation"/>
+            <img src={imgUrl('slideshow/slideshow-pipeline-view.png')} alt="Pipelines"/>
+        </div>
     </div>
 );
 
@@ -81,11 +90,13 @@ class HomeSplash extends React.Component {
     render() {
         let language = this.props.language || '';
         return (
+            <div>
             <SplashContainer>
                 <Logo img_src={imgUrl('logo.png')}/>
                 <div className="inner">
                     <ProjectTitle/>
-                    <h4 style={{color:'rgb(27, 20, 100)'}}>A complete toolbox to easily analyze IoT data streams without programming skills.</h4>
+                    <h4 style={{color: 'rgb(27, 20, 100)'}}>A complete toolbox to easily analyze IoT data streams
+                        without programming skills.</h4>
                     <PromoSection>
                         <Button href={docUrl('user-guide-tour.html', language)}>View the tour</Button>
                         <Button href={docUrl('user-guide-installation.html', language)}>Installation Guide</Button>
@@ -95,6 +106,8 @@ class HomeSplash extends React.Component {
                     <ScreenshotSection screenshot_src={imgUrl('streampipes-screenshot.png')}/>
                 </div>
             </SplashContainer>
+            <Features></Features>
+            </div>
         );
     }
 }
@@ -139,16 +152,22 @@ const Features = props => (
     <Block layout="fourColumn">
         {[
             {
-                content: 'This is the content of my feature',
-                image: imgUrl('docusaurus.svg'),
+                content: 'Integrate data sets and data streams using the built-in StreamPipes Connect library with support for <b>generic protocols</b> such as HTTP, Kafka, MQTT, OPC-UA, Files or <b>specific adapters</b> for open data sources.',
+                image: imgUrl('one.png'),
                 imageAlign: 'top',
-                title: 'Feature One',
+                title: 'Connect',
             },
             {
-                content: 'The content of my second feature',
-                image: imgUrl('docusaurus.svg'),
+                content: 'Harmonize and analyze data by using the real-time algorithm toolbox ranging from <b>simple filters</b> up to pre-trained <b>neural networks</b> - or build your own algorithm with the provided SDK.',
+                image: imgUrl('two.png'),
                 imageAlign: 'top',
-                title: 'Feature Two',
+                title: 'Analyze',
+            },
+            {
+                content: 'Trigger <b>notifications</b>, configure your <b>real-time dashboard</b> or send data to <b>third-party systems</b> such as databases (e.g., Kafka or Elasticsearch), external services (e.g., Slack) or IoT actuators.',
+                image: imgUrl('three.png'),
+                imageAlign: 'top',
+                title: 'Exploit',
             },
         ]}
     </Block>
