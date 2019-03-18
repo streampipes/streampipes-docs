@@ -10,7 +10,9 @@ sidebar_label: Common Problems
 * Only few processors are available in the pipeline editor
 * No data is shown in the live dashbord
 * Windows 10: Should I use settings windows containers or docker containers?
+* Configurations are not deleted
 * Help us to improve StreamPipes and this documentation
+* Docker Network already used
 
 ## Windows 10: Consul, Kafka, Zookeeper, or Kafka-Rest did not start
 **Problem:** You get an error message similar to: `ERROR: for consul  Cannot start service consul: b'driver failed programming external connectivity on endpoint sp-test_consul_1 (eae0457fc03c1364b8e81a6e155ca4b95ee1e1d01bb3c1aa9dd5192bdcb7b91a): Error starting userland proxy: mkdir /port/tcp:0.0.0.0:8600:tcp:172.30.0.9:8600: input/output error`
@@ -51,6 +53,18 @@ This problem only occurs in testing scenarios, in production scenarios the IP ca
 **Problem:** StreamPipes does not work with Windows 10.
 
 **Solution:** You should use docker containers. Go to the docker settings on our taks bar and select 'Switch to Docker containers'.
+
+## Configurations are not deleted
+**Problem:** The configurations are not deleted from the host system. Even after manually removing the 'config/' folder StreamPipes settings are note deleted.
+Also the Consul settings are still there.
+
+**Solution:** Probably Docker did not mount a volume in the 'config/' folder. You must delete the anonymous docker volumes manually. See in docker [documentation](https://docs.docker.com/engine/reference/commandline/volume_rm/).
+
+
+## Docker Network already used
+**Problem:** When starting StreamPipes the error message: "Creating network 'streampipes-cli_spnet' with driver 'bridge' Pool overlaps with other one on this address space" is shown.
+
+**Solution:** Delete old networks for example with "docker network prune".
 
 ## Help us to improve StreamPipes and this documentation
 Help us to improve this section.
