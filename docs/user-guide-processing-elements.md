@@ -4,10 +4,10 @@ title: Processing Elements
 sidebar_label: Processing Elements
 ---
 
-This page explains all the Procesing Elements that are available in the StreamPipes Starter Kit.
+This page explains some processing elements (not including the full list) that are available in the StreamPipes Starter Kit.
 New Processing Elements can also be included during runtime.
 The once presented on this page come with StreamPipes and cen be used immediately. 
-The next section "Developer Guide" explains how new Processing Elements can be implemented and integrated into StreamPipes.
+Check the [developer guide](dev-guide-tutorial-processors) to learn how new Processing Elements can be implemented and integrated into StreamPipes.
 
 ## Data Streams
 
@@ -101,6 +101,8 @@ The next section "Developer Guide" explains how new Processing Elements can be i
 </p>
 </div>
 
+...and many more!
+
 ## Data Sinks
 
 <div class="admonition info">
@@ -127,4 +129,10 @@ The next section "Developer Guide" explains how new Processing Elements can be i
 <div class="admonition-title">Elasticsearch</div>
 <p>Stores data in an Elasticsearch cluster</p>
 </div>
+
+...and many more!
+
+## Further resources
+
+Also check the github project [https://www.github.com/streampipes/streampipes-pipeline-elements](https://www.github.com/streampipes/streampipes-pipeline-elements) to get an up-to-date list of available pipeline elements.
 
