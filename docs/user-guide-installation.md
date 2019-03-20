@@ -7,7 +7,7 @@ sidebar_label: Installation
 <div class="admonition error">
 <div class="admonition-title">StreamPipes desktop version</div>
 <p>StreamPipes usually runs on a big data infrastructure. We did our best that you can install it yourself with less powerful hardware, even on your laptop.<br/>
-    If you have any problems or are interested in a production system please <a href="mailto:feedback@streampipes.org">contact us</a>!</p>
+   By default, StreamPipes will start a lightweight version (not including big data tools) with few pipeline elements. To start the full version, run ./streampipes start bigdata.</p>
 </div>
 
 ## Prerequisites
@@ -56,13 +56,16 @@ We provide a script to install, stop, and start StreamPipes.
 The installer is available in two different versions, one to run StreamPipes on your laptop and another big data version which is intended to be run on a more powerful computer or server.
 In the desktop version, only a limited amount of processors is available to ensure that the system also runs with less memory.
 
+1. Clone or download the installer script from [https://www.github.com/streampipes/streampipes-installer](https://www.github.com/streampipes/streampipes-installer)
+2. Execute ``./streampipes start`` to run a lightweight StreamPipes version with few pipelines elements (not including Big Data frameworks) or start the full version (16GB RAM recommended) by executing ``./streampipes start bigdata``
+3. Open your browser, navigate to ``http://YOUR_HOSTNAME_HERE`` and follow the installation instructions.
+4. Once finished, switch to the pipeline editor and start the interactive tour or check the [online tour](https://docs.streampipes.org/docs/user-guide-tour) to learn how to create your first pipeline!
+
+
 <div class="admonition info">
 <div class="admonition-title">Installation might take some minutes</div>
 <p> StreamPipes is a modular, easily extensible system consisting of several micro services.
        The installer automatically downloads all required services. Depending on your internet connection, the first installation may take some while.</p></div>
-
-
-<a href="https://github.com/streampipes/streampipes-installer" target="_blank">Download Installer on GitHub</a>
 
 
 After installing it, open your browser and navigate to `localhost`.

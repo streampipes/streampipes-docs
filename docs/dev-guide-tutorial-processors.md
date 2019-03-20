@@ -29,22 +29,18 @@ The algorithm outputs every location event once the position has entered the geo
 
 ## Project setup
 
-Similar to the data source tutorial, there are two options to start a new project (option 1 is recommended):
+To create new projects from scratch, several Maven archetypes exist to start developing.
+Enter the following command to create a new project based on the StreamPipes ``Processors-Flink`` archetype:
 
-**Option 1: Using a template project**
+```
+mvn archetype:generate -DarchetypeGroupId=org.streampipes \
+-DarchetypeArtifactId=streampipes-archetype-pe-processors-flink -DarchetypeVersion=0.61.0 \
+-DgroupId=org.streampipes.tutorial -DartifactId=geofence-tutorial -DclassNamePrefix=Geofencing -DpackageName=geofencing
+```
 
-Clone the following project from our Github repo: https://github.com/streampipes/templates-flink
-
-Import the project into an IDE of your choice.
-You should see a structure like this:
+Once you've imported the generated project, the project structure should look as follows:
 
 <img src="/img/tutorial-processors/project-structure-processor.PNG" alt="Project Structure Data Processor">
-
-Rename the classes (or create new classes by copying these files) as follows:
-* `ProcessorTemplateController.java` to `GeofencingController.java`
-* `ProcessorTemplateFlatMap.java` to `GeofencingProcessor.java`
-* `ProcessorTemplateParameters.java` to `GeofencingParameters.java`
-* `ProcessorTemplateProgram.java` to `GeofencingProgram.java`
 
 
 <div class="admonition tip">
@@ -52,44 +48,77 @@ Rename the classes (or create new classes by copying these files) as follows:
 <p>Besides the basic project skeleton, the sample project also includes an example Dockerfile you can use to package your application into a Docker container.</p>
 </div>
 
-
-**Option 2: Start a new project from scratch**
-
-If you want to start from scratch, we refer to the [Test Processor SDK guide](dev-guide-processor-sdk.md) which provides instructions on the general project setup.
+Now you're ready to create your first data processor for StreamPipes!
 
 ## Adding data processor requirements
 
-Now we will add a new data stream definition.
-First, open the class `GeofencingController` which should look as follows:
+First, we will add a new stream requirement.
+Open the class `GeofencingController` which should look as follows:
 
 ```java
+package org.streampipes.tutorial.pe.processor.geofencing;
+
+import org.streampipes.tutorial.config.Config;
+
+import org.streampipes.model.DataProcessorType;
 import org.streampipes.model.graph.DataProcessorDescription;
 import org.streampipes.model.graph.DataProcessorInvocation;
-import org.streampipes.wrapper.flink.AbstractFlinkAgentDeclarer;
-import org.streampipes.wrapper.flink.FlinkSepaRuntime;
+import org.streampipes.sdk.builder.ProcessingElementBuilder;
+import org.streampipes.sdk.builder.StreamRequirementsBuilder;
+import org.streampipes.sdk.extractor.ProcessingElementParameterExtractor;
+import org.streampipes.sdk.helpers.EpRequirements;
+import org.streampipes.sdk.helpers.Labels;
+import org.streampipes.sdk.helpers.OutputStrategies;
+import org.streampipes.sdk.helpers.SupportedFormats;
+import org.streampipes.sdk.helpers.SupportedProtocols;
+import org.streampipes.wrapper.flink.FlinkDataProcessorDeclarer;
+import org.streampipes.wrapper.flink.FlinkDataProcessorRuntime;
 
-public class GeofencingController extends FlinkDataProcessorDeclarer<GeofencingParameters> {
+public class GeofencingController extends
+				FlinkDataProcessorDeclarer<GeofencingParameters> {
 
-    @Override
-    public DataProcessorDescription declareModel() {
+	private static final String EXAMPLE_KEY = "example-key";
 
-    }
+	@Override
+	public DataProcessorDescription declareModel() {
+		return ProcessingElementBuilder.create("org.streampipes.tutorial-geofencing", "Geofencing",
+				"Description")
+						.category(DataProcessorType.ENRICH)
+						.requiredStream(StreamRequirementsBuilder
+							.create()
+							.requiredProperty(EpRequirements.anyProperty())
+							.build())
+						.supportedFormats(SupportedFormats.jsonFormat())
+						.supportedProtocols(SupportedProtocols.kafka())
+						.outputStrategy(OutputStrategies.keep())
+						.requiredTextParameter(Labels.from(EXAMPLE_KEY, "Example Text Parameter", "Example " +
+				"Text Parameter Description"))
+						.build();
+	}
 
-    @Override
-    protected FlinkDataProcessorRuntime<GeofencingParameters> getRuntime(DataProcessorInvocation sepaInvocation) {
+	@Override
+	public FlinkDataProcessorRuntime<GeofencingParameters> getRuntime(DataProcessorInvocation
+				graph, ProcessingElementParameterExtractor extractor) {
 
-    }
+		String exampleString = extractor.singleValueParameter(EXAMPLE_KEY, String.class);
+
+		GeofencingParameters params = new GeofencingParameters(graph, exampleString);
+
+		return new GeofencingProgram(params, Config.INSTANCE.getDebug());
+	}
+
 }
+
 ```
 
 In this class, we need to implement two methods: The `declareModel` method is used to define abstract stream requirements such as event properties that must be present in any input stream that is later connected to the element using the StreamPipes UI.
 The second method, `getRuntime` is used to create and deploy the parameterized Flink program once a pipeline using this element is started.
 
 Similar to data sources, the SDK provides a builder class to generate the description for data processors.
-add the following lines to the `declareModel` method:
+Delete the conent within the ``declareModel`` method and add the following lines to the `declareModel` method:
 
 ```java
-return ProcessingElementBuilder.create("geofencing-flink", "Geofencing", "A simple geofencing data processor " +
+return ProcessingElementBuilder.create("org.streampipes.tutorial.geofencing", "Geofencing", "A simple geofencing data processor " +
             "using the Apache Flink wrapper")
 ```
 
@@ -146,7 +175,7 @@ Add the following line to the `declareModel` method:
 ```
 
 We've now defined that we would like to receive an instance that provides a latitude and a longitude coordinate.
-Users can input these values either manually, or they can look up _domain knowledge_ (part of the StreamPipes Enterprise Edition), i.e., knowledge stored isolated from the stream definition.
+Users can input these values either manually, or they can look up _domain knowledge_, i.e., knowledge stored isolated from the stream definition.
 
 Finally, we need to define technical requirements of the data processor, called _groundings_.
 StreamPipes supports various runtime data formats (e.g., JSON or Thrift) and various protocols (e.g., Kafka or JMS).
@@ -227,14 +256,7 @@ This simple Pojo class will later serve to store user-defined parameters in a si
 
 Now we go back to the controller class and extract these values from the invocation object.
 
-First, add the following line to the `getRuntime` method:
-
-```java
-ProcessingElementParameterExtractor extractor =
-    ProcessingElementParameterExtractor.from(dataProcessorInvocation);
-```
-
-The extractor provides convenience methods to extract the relevant information from the `DataProcessorInvocation` object.
+The ``ProessingElementParameterExtractor``  provides convenience methods to extract the relevant information from the `DataProcessorInvocation` object.
 
 Next, we are interested in the fields of the input event stream that contains the latitude and longitude value we would like to compute against the geofence center location as follows:
 
@@ -268,7 +290,7 @@ GeofencingParameters params = new GeofencingParameters(dataProcessorInvocation, 
 Finally, return an instance of the class ```GeofencingProgram```:
 
 ```java
-return new GeofencingProgram(params);
+return new GeofencingProgram(params, true);
 ```
 
 <div class="admonition tip">
@@ -370,9 +392,9 @@ public class GeofencingProcessor implements FlatMapFunction<Map<String, Object>,
   }
 
   @Override
-  public void flatMap(Map<String, Object> in, Collector<Map<String, Object>> out) throws Exception {
-    Float latitude = Float.parseFloat(String.valueOf(in.get(latitudeFieldName)));
-    Float longitude = Float.parseFloat(String.valueOf(in.get(longitudeFieldName)));
+  public void flatMap(Event in, Collector<Event> out) throws Exception {
+    Float latitude = in.getFieldBySelector(latitudeFieldName).getAsPrimitive().getAsFloat();
+    Float longitude = in.getFieldBySelector(longitudeFieldName).getAsPrimitive().getAsFloat();
 
     Float distance = distFrom(latitude, longitude, centerLatitude, centerLongitude);
 
@@ -406,26 +428,29 @@ return dataStreams[0].flatMap(new GeofencingProcessor(params.getLatitudeFieldNam
     params.getCenterLatitude(), params.getCenterLongitude(), params.getRadius()));
 ```
 
-<div class="admonition info">
-<div class="admonition-title">Info</div>
-<p>Although you could pass the <code>GeofencingParameters</code> class directly to the <code>GeofencingProcessor</code>, in our example we extract the properties to the class.
-       This is due to the circumstance that the parameter class currently is not serializable and Flink requires all classes to be serializable.
-       Future versions will fix this bug in StreamPipes.</p>
-</div>
-
-
 ## Preparing the container
 The final step is to define the deployment type of our new data source. In this tutorial, we will create a so-called `StandaloneModelSubmitter`.
 This client will start an embedded web server that provides the description of our data source and automatically submits the program to the registered Apache Flink cluster.
 
-Create a new class `Main` that implements `StandaloneModelSubmitter` and add the following code into the main method:
+Go to the class `Init` that extends `StandaloneModelSubmitter` and should look as follows:
 ```java
-public static void main(String[] args) {
+package org.streampipes.tutorial.main;
 
-   DeclarersSingleton.getInstance().add(new GeofencingController());
+import org.streampipes.container.init.DeclarersSingleton;
+import org.streampipes.container.standalone.init.StandaloneModelSubmitter;
 
-   new Main().init(Config.INSTANCE);
+import org.streampipes.tutorial.config.Config;
+import org.streampipes.tutorial.pe.processor.geofencing.GeofencingController;
 
+public class Init extends StandaloneModelSubmitter {
+
+  public static void main(String[] args) throws Exception {
+    DeclarersSingleton.getInstance()
+            .add(new GeofencingController());
+
+    new Init().init(Config.INSTANCE);
+
+  }
 }
 ```
 
@@ -442,8 +467,8 @@ public static void main(String[] args) {
 <div class="admonition tip">
 <div class="admonition-title">Tip</div>
 <p>By default, the container registers itself using the hostname later used by the Docker container, leading to a 404 error when you try to access an RDF description.
-       For local development, you need to change the hostname in Consul to `localhost`.
-       Open the class `TemplateConfig.java` and change the value defined in the `HOST` variable from `template-flink` to `localhost`.
+       For local development, we provide an environment file in the ``development`` folder. You can add your hostname here, which will override settings from the Config class.
+       For instance, use the IntelliJ ``EnvFile`` plugin to automatically provide the environment variables upon start.
 </p>
 </div>
 
@@ -451,13 +476,13 @@ public static void main(String[] args) {
 <div class="admonition tip">
 <div class="admonition-title">Tip</div>
 <p> The default port of all pipeline element containers as defined in the `Config` file is port 8090.
-       If you'd like to run mutliple containers at the same time on your development machine, you can modify the port in the `Config.java` class.
+       If you'd like to run mutliple containers at the same time on your development machine, change the port in the environment file.
 </p>
 </div>
 
 Now we are ready to start our container!
 
-Execute the main method in the class `Main` we've just created, open a web browser and navigate to http://localhost:8090.
+Execute the main method in the class `Main` we've just created, open a web browser and navigate to http://localhost:8090 (or the port you have assigned in the environment file).
 
 You should see something as follows:
 
@@ -468,7 +493,7 @@ Click on the link of the data source to see the RDF description of the pipeline 
 <img src="/img/tutorial-processors/pe-rdf-geofencing.PNG" alt="Geofencing RDF description">
 
 The container automatically registers itself in the Consul installation of StreamPipes.
-To install the just created element, open the StreamPipes UI and follow the manual provided in the [user guide](../user_guide/features/#install-pipeline-elements).
+To install the just created element, open the StreamPipes UI and follow the manual provided in the [user guide](user-guide-installation).
 
 ## Read more
 
