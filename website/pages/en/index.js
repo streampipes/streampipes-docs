@@ -91,6 +91,7 @@ class HomeSplash extends React.Component {
         let language = this.props.language || '';
         return (
             <div>
+                <div style={{background: "rgb(27, 20, 100)", color: "white", fontSize:"16pt", textAlign:"center", padding:"10px"}}><b>Try our open source toolbox at <a href="https://www.hannovermesse.de/aussteller/fzi-forschungszentrum-informatik/M832315" style={{fontWeight:"bold", color:"white", textDecoration:"underline"}}>Hannover Messe</a>! Hall 2, Stand C47</b></div>
             <SplashContainer>
                 <Logo img_src={imgUrl('logo.png')}/>
                 <div className="inner">
