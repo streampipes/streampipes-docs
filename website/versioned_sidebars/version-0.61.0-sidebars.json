@@ -9,6 +9,11 @@
       "version-0.61.0-user-guide-software-components"
     ]
   },
+  "version-0.61.0-pipeline-elements": {
+    "Pipeline Elements": [
+      "version-0.61.0-pipeline-elements"
+    ]
+  },
   "version-0.61.0-developer-guide": {
     "Basics": [
       "version-0.61.0-dev-guide-introduction",

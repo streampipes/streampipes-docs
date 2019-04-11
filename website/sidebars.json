@@ -6,7 +6,18 @@
       "user-guide-installation",
       "user-guide-tour",
       "user-guide-processing-elements",
-      "user-guide-software-components"]
+      "user-guide-software-components"
+    ]
+  },
+  "pipeline-elements": {
+    "Pipeline Elements": [
+      "pipeline-elements",
+      "org.streampipes.processor.imageclassification.jvm.generic-image-classification/org.streampipes.processor.imageclassification.jvm.generic-image-classification",
+      "org.streampipes.processor.imageclassification.jvm.image-cropper/org.streampipes.processor.imageclassification.jvm.image-cropper",
+      "org.streampipes.processor.imageclassification.jvm.image-enricher/org.streampipes.processor.imageclassification.jvm.image-enricher",
+      "org.streampipes.processor.imageclassification.image-rectifier/org.streampipes.processor.imageclassification.image-rectifier",
+      "org.streampipes.processor.imageclassification.qrcode/org.streampipes.processor.imageclassification.qrcode"
+    ]
   },
   "developer-guide": {
     "Basics": [
@@ -15,7 +26,7 @@
       "dev-guide-architecture",
       "dev-guide-development-environment",
       "dev-guide-archetype"
-      ],
+    ],
     "Tutorials": [
       "dev-guide-tutorial-sources",
       "dev-guide-tutorial-processors"
@@ -28,13 +39,15 @@
       "dev-guide-static-properties",
       "dev-guide-output-strategies",
       "dev-guide-event-model"
-     ],
+    ],
     "Configuration": [
       "dev-guide-ssl",
       "dev-guide-configuration"
     ]
   },
   "faq": {
-    "FAQ": ["faq-common-problems"]
+    "FAQ": [
+      "faq-common-problems"
+    ]
   }
 }

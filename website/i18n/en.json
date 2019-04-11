@@ -76,6 +76,30 @@
       "license": {
         "title": "license"
       },
+      "org.streampipes.processor.imageclassification.image-rectifier/org.streampipes.processor.imageclassification.image-rectifier": {
+        "title": "Image Rectifier",
+        "sidebar_label": "Image Rectifier"
+      },
+      "org.streampipes.processor.imageclassification.jvm.generic-image-classification/org.streampipes.processor.imageclassification.jvm.generic-image-classification": {
+        "title": "Generic Image Classification",
+        "sidebar_label": "Generic Image Classification"
+      },
+      "org.streampipes.processor.imageclassification.jvm.image-cropper/org.streampipes.processor.imageclassification.jvm.image-cropper": {
+        "title": "Image Cropper",
+        "sidebar_label": "Image Cropper"
+      },
+      "org.streampipes.processor.imageclassification.jvm.image-enricher/org.streampipes.processor.imageclassification.jvm.image-enricher": {
+        "title": "Image Enricher",
+        "sidebar_label": "Image Enricher"
+      },
+      "org.streampipes.processor.imageclassification.qrcode/org.streampipes.processor.imageclassification.qrcode": {
+        "title": "QR Code Reader",
+        "sidebar_label": "QR Code Reader"
+      },
+      "pipeline-elements": {
+        "title": "Pipeline Elements",
+        "sidebar_label": "Overview"
+      },
       "privacy": {
         "title": "Datenschutzerklärung",
         "sidebar_label": "Privacy Notice"
@@ -139,6 +163,10 @@
       "version-0.55.2-faq-common-problems": {
         "title": "Common Problems",
         "sidebar_label": "Common Problems"
+      },
+      "version-0.55.2-pipeline-elements": {
+        "title": "Pipeline Elements",
+        "sidebar_label": "Pipeline Elements"
       },
       "version-0.55.2-privacy": {
         "title": "Datenschutzerklärung",
@@ -228,6 +256,10 @@
         "title": "Common Problems",
         "sidebar_label": "Common Problems"
       },
+      "version-0.61.0-pipeline-elements": {
+        "title": "Pipeline Elements",
+        "sidebar_label": "Pipeline Elements"
+      },
       "version-0.61.0-user-guide-installation": {
         "title": "Installation",
         "sidebar_label": "Installation"
@@ -244,12 +276,14 @@
     "links": {
       "User Guide": "User Guide",
       "Developer Guide": "Developer Guide",
+      "Pipeline Elements": "Pipeline Elements",
       "FAQ": "FAQ",
       "Blog": "Blog",
       "Community": "Community"
     },
     "categories": {
       "User Guide": "User Guide",
+      "Pipeline Elements": "Pipeline Elements",
       "Basics": "Basics",
       "Tutorials": "Tutorials",
       "SDK Reference": "SDK Reference",
