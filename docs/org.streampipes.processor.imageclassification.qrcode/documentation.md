@@ -4,10 +4,10 @@ title: QR Code Reader
 sidebar_label: QR Code Reader
 ---
 
-## QR Code Reader
+
 
 <p align="center"> 
-    <img src="/img/pipeline-elements/org.streampipes.processor.imageclassification.qrcode/icon.png" width="150px;"/>
+    <img src="/img/pipeline-elements/org.streampipes.processor.imageclassification.qrcode/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***

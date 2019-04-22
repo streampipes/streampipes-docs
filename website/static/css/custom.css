@@ -19,6 +19,18 @@ body {
     font-family: 'Roboto', sans-serif !important;
 }
 
+hr {
+    background-color: #e1e4e8;
+    border: 0;
+    height: .25em;
+    margin: 24px 0;
+    padding: 0;
+}
+
+.pe-image-documentation {
+    box-shadow: 0 0 3px #555;
+    padding: 5px;
+}
 
 .pe-grid-container {
     display: grid;
@@ -32,10 +44,10 @@ body {
     background-color: #ffffff;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
     border: solid 1px #dedede;
-    padding: 16px 0px 2px;
+    padding: 8px 0px 2px;
     color: #262626;
     display: inline-block;
-    margin: 10px 5px 0 5px;
+    margin: 15px 7px 0 7px;
     vertical-align: top;
     text-align: left;
     position: relative;
@@ -66,6 +78,7 @@ body {
     float: left;
     padding: 10px;
     margin-right: 20px;
+    margin-top:10px;
 }
 
 .pe-container-item-header-pe {
@@ -78,7 +91,7 @@ body {
     color: white;
     float: right;
     padding: 2px 4px;
-    font-size: 11pt;
+    font-size: 9pt;
     align-self: flex-end;
 }
 
@@ -106,6 +119,10 @@ body {
 
 .pe-icon {
     display: inline-block;
+    margin-left:auto;
+    margin-right:auto;
+    max-height:100%;
+    width:100%;
 }
 
 .pe-icon-sink {

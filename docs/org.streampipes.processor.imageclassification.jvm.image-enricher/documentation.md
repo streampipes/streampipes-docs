@@ -4,10 +4,10 @@ title: Image Enricher
 sidebar_label: Image Enricher
 ---
 
-## Image Enricher
+
 
 <p align="center"> 
-    <img src="/img/pipeline-elements/org.streampipes.processor.imageclassification.jvm.image-enricher/icon.png" width="150px;"/>
+    <img src="/img/pipeline-elements/org.streampipes.processor.imageclassification.jvm.image-enricher/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***

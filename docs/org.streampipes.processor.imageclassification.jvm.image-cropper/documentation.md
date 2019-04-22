@@ -4,10 +4,10 @@ title: Image Cropper
 sidebar_label: Image Cropper
 ---
 
-## Image Cropper
+
 
 <p align="center"> 
-    <img src="/img/pipeline-elements/org.streampipes.processor.imageclassification.jvm.image-cropper/icon.png" width="150px;"/>
+    <img src="/img/pipeline-elements/org.streampipes.processor.imageclassification.jvm.image-cropper/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***

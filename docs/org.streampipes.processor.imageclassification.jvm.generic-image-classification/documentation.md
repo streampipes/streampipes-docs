@@ -4,10 +4,10 @@ title: Generic Image Classification
 sidebar_label: Generic Image Classification
 ---
 
-## Generic Image Classification
+
 
 <p align="center"> 
-    <img src="/img/pipeline-elements/org.streampipes.processor.imageclassification.jvm.generic-image-classification/icon.png" width="150px;"/>
+    <img src="/img/pipeline-elements/org.streampipes.processor.imageclassification.jvm.generic-image-classification/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***

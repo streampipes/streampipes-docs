@@ -4,10 +4,10 @@ title: Image Rectifier
 sidebar_label: Image Rectifier
 ---
 
-## Image Rectifier
+
 
 <p align="center"> 
-    <img src="/img/pipeline-elements/org.streampipes.processor.imageclassification.image-rectifier/icon.png" width="150px;"/>
+    <img src="/img/pipeline-elements/org.streampipes.processor.imageclassification.image-rectifier/icon.png" width="150px;" class="pe-image-documentation"/>
 </p>
 
 ***
