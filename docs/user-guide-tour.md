@@ -15,7 +15,7 @@ The credentials for the user are specified during the installation process.
 
 ## Home
 After logging in, the user is redirected on to the home page.
-The home page gives an overview over the different features available in the StreamPipes UI and your pipelines.
+The home page gives an overview over the different features available in the StreamPipes UI.
 
 On the left, the navigation menu can be seen.
 You can either use the icons on the left side or click on the menu icon on the
