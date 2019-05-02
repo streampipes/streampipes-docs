@@ -15,7 +15,6 @@ sidebar_label: Value Changed
 ## Description
 
 This processor sends out an event everytime a specific object changes. It also adds a timestamp in ms from the system time.
-Add a detailed description here
 
 ***
 

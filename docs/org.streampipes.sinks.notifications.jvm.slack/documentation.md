@@ -15,12 +15,12 @@ sidebar_label: Slack Notification
 ## Description
 
 Slack bot to send notifications directly into your slack
-Add a detailed description here
 
 ***
 
 ## Required input
 
+This sink does not have any requirements and works with any incoming event type.
 
 ***
 
@@ -28,9 +28,20 @@ Add a detailed description here
 
 Describe the configuration parameters here
 
-### 1st parameter
+### Receiver
 
+The receiver of the Slack message.
+
+### Channel Type
+
+The channel type, should be "User" or "Channel"
+
+### Content
+
+The message that should be sent.
 
 ### 2nd parameter
 
 ## Output
+
+(not applicable for data sinks)

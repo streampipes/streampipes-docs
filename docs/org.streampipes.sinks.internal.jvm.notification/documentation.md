@@ -14,8 +14,7 @@ sidebar_label: Notification
 
 ## Description
 
-Displays a notification in the UI panel
-Add a detailed description here
+Displays a notification in the UI panel of StreamPipes.
 
 ***
 
@@ -26,11 +25,16 @@ Add a detailed description here
 
 ## Configuration
 
-Describe the configuration parameters here
+This sink does not have any requirements and works with any incoming event type.
 
-### 1st parameter
+### Notification Title
 
+The title of the notification.
 
-### 2nd parameter
+### Content
+
+The notification message.
 
 ## Output
+
+(not applicable for data sinks)
