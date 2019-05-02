@@ -12,7 +12,7 @@ In this page, an overview of the many features of StreamPipes is given. We will 
 First of all, a user needs to log in to the system.
 The credentials for the user are specified during the installation process.
 
-![StreamPipes Login](../img/features/login.png) 
+![StreamPipes Login](/img/features/login.png) 
 
 ## Home
 After logging in, the user is redirected on to the home page.
