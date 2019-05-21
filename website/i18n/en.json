@@ -80,17 +80,9 @@
         "title": "Spatial Grid Enrichment",
         "sidebar_label": "Spatial Grid Enrichment"
       },
-      "org.streampipes.processor.imageclassification.image-rectifier/org.streampipes.processor.imageclassification.image-rectifier": {
-        "title": "Image Rectifier",
-        "sidebar_label": "Image Rectifier"
-      },
       "org.streampipes.processor.imageclassification.jvm.generic-image-classification/org.streampipes.processor.imageclassification.jvm.generic-image-classification": {
         "title": "Generic Image Classification",
         "sidebar_label": "Generic Image Classification"
-      },
-      "org.streampipes.processor.imageclassification.jvm.image-cropper/org.streampipes.processor.imageclassification.jvm.image-cropper": {
-        "title": "Image Cropper",
-        "sidebar_label": "Image Cropper"
       },
       "org.streampipes.processor.imageclassification.jvm.image-enricher/org.streampipes.processor.imageclassification.jvm.image-enricher": {
         "title": "Image Enricher",
@@ -103,10 +95,6 @@
       "org.streampipes.processors.aggregation.flink.aggregation/org.streampipes.processors.aggregation.flink.aggregation": {
         "title": "Aggregation",
         "sidebar_label": "Aggregation"
-      },
-      "org.streampipes.processors.aggregation.flink.count/org.streampipes.processors.aggregation.flink.count": {
-        "title": "Count Aggregation",
-        "sidebar_label": "Count Aggregation"
       },
       "org.streampipes.processors.aggregation.flink.rate/org.streampipes.processors.aggregation.flink.rate": {
         "title": "Event Rate",
@@ -140,14 +128,6 @@
         "title": "Numerical Filter",
         "sidebar_label": "Numerical Filter"
       },
-      "org.streampipes.processors.filters.jvm.processor.mergestartandend/org.streampipes.processors.filters.jvm.processor.mergestartandend": {
-        "title": "Merge Start And End",
-        "sidebar_label": "Merge Start And End"
-      },
-      "org.streampipes.processors.filters.jvm.processor.pallettransportdetection/org.streampipes.processors.filters.jvm.processor.pallettransportdetection": {
-        "title": "Pallet Transport Detection",
-        "sidebar_label": "Pallet Transport Detection"
-      },
       "org.streampipes.processors.filters.jvm.project/org.streampipes.processors.filters.jvm.project": {
         "title": "Projection",
         "sidebar_label": "Projection"
@@ -156,33 +136,9 @@
         "title": "Text Filter",
         "sidebar_label": "Text Filter"
       },
-      "org.streampipes.processors.geo.jvm.geocoder/org.streampipes.processors.geo.jvm.geocoder": {
-        "title": "Geocoder",
-        "sidebar_label": "Geocoder"
-      },
-      "org.streampipes.processors.geo.jvm.google-routing/org.streampipes.processors.geo.jvm.google-routing": {
-        "title": "Google Routing",
-        "sidebar_label": "Google Routing"
-      },
-      "org.streampipes.processors.pattern-detection.flink.absence/org.streampipes.processors.pattern-detection.flink.absence": {
-        "title": "Absence",
-        "sidebar_label": "Absence"
-      },
-      "org.streampipes.processors.pattern-detection.flink.and/org.streampipes.processors.pattern-detection.flink.and": {
-        "title": "And",
-        "sidebar_label": "And"
-      },
-      "org.streampipes.processors.pattern-detection.flink.increase/org.streampipes.processors.pattern-detection.flink.increase": {
-        "title": "Increase",
-        "sidebar_label": "Increase"
-      },
       "org.streampipes.processors.pattern-detection.flink.peak-detection/org.streampipes.processors.pattern-detection.flink.peak-detection": {
         "title": "Peak Detection",
         "sidebar_label": "Peak Detection"
-      },
-      "org.streampipes.processors.pattern-detection.flink.sequence/org.streampipes.processors.pattern-detection.flink.sequence": {
-        "title": "Sequence",
-        "sidebar_label": "Sequence"
       },
       "org.streampipes.processors.siddhi.frequency/org.streampipes.processors.siddhi.frequency": {
         "title": "Frequency Calculation",
@@ -207,10 +163,6 @@
       "org.streampipes.processors.siddhi.stop/org.streampipes.processors.siddhi.stop": {
         "title": "Stream Stop Detection",
         "sidebar_label": "Stream Stop Detection"
-      },
-      "org.streampipes.processors.statistics.flink.statistics-summary/org.streampipes.processors.statistics.flink.statistics-summary": {
-        "title": "Statistics Summary",
-        "sidebar_label": "Statistics Summary"
       },
       "org.streampipes.processors.textmining.flink.languagedetection/org.streampipes.processors.textmining.flink.languagedetection": {
         "title": "Language Detection",

@@ -16,6 +16,10 @@ sidebar_label: Email Notification
 
 This sink sends an email to a specified receiver.
 
+Before you use this sink, the settings of your email server need to be configured.
+After you've installed the element, navigate to ``Settings``, open the panel ``Sinks Notifications JVM`` and add your
+ mail server and credentials.
+
 ***
 
 ## Required input
