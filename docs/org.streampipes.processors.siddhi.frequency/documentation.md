@@ -14,8 +14,7 @@ sidebar_label: Frequency Calculation
 
 ## Description
 
-Calculates the frequency of the event stream
-Add a detailed description here
+Calculates the frequency of the event stream.
 
 ***
 
@@ -25,8 +24,6 @@ Add a detailed description here
 ***
 
 ## Configuration
-
-Describe the configuration parameters here
 
 ### 1st parameter
 
