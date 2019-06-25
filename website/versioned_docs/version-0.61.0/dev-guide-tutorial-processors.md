@@ -10,7 +10,7 @@ In this tutorial, we will add a new data processor using the Apache Flink wrappe
 From an architectural point of view, we will create a self-contained service that includes the description of the data processor and a Flink-compatible implementation.
 Once a pipeline is started that uses this data processor, the implementation is submitted to an Apache Flink cluster.
 
-If this is the first time you are extending StreamPipes, we recommend doing the [data source tutorial](dev-guide-sdk-guide-processors) first.
+If this is the first time you are extending StreamPipes, we recommend doing the [data source tutorial](dev-guide-sdk-guide-sources) first.
 
 ## Objective
 
