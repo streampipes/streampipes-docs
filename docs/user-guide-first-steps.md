@@ -1,7 +1,7 @@
 ---
-id: user-guide-getting-started
-title: Getting Started
-sidebar_label: Getting Started
+id: user-guide-first-steps
+title: First steps
+sidebar_label: First steps
 ---
 
 This quick start explains how StreamPipes can be set up in the browser.

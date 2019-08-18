@@ -276,9 +276,9 @@
         "title": "Datenschutzerklärung",
         "sidebar_label": "Privacy Notice"
       },
-      "user-guide-getting-started": {
-        "title": "Getting Started",
-        "sidebar_label": "Getting Started"
+      "user-guide-first-steps": {
+        "title": "First steps",
+        "sidebar_label": "First steps"
       },
       "user-guide-installation": {
         "title": "Installation",
@@ -287,10 +287,6 @@
       "user-guide-introduction": {
         "title": "Introduction",
         "sidebar_label": "Introduction"
-      },
-      "user-guide-processing-elements": {
-        "title": "Processing Elements",
-        "sidebar_label": "Processing Elements"
       },
       "user-guide-software-components": {
         "title": "Software Components",
