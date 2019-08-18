@@ -15,6 +15,56 @@
 @media only screen and (min-width: 1500px) {
 }
 
+.slick-next {
+    right:-40px;
+}
+
+.slick-next:before, .slick-prev:before {
+}
+
+.slick-next, .slick-prev {
+    z-index:100;
+    width:40px;
+    height:40px;
+}
+
+.slick-prev {
+    left:-40px;
+}
+
+.slick-next:before, .slick-prev:before {
+    font-size:40px;
+}
+
+.slick-dots li {
+    width:30px;
+}
+
+.slick-dots li button {
+    width:30px;
+    height:30px;
+}
+
+.slick-dots {
+    bottom: 20px;
+}
+
+.slick-dots li button:before {
+    font-size: 20px;
+    color: rgb(27, 20, 100);
+    border-radius:50%;
+    border: 3px solid white;
+    line-height:24px;
+    opacity: 0.55;
+    background: white;
+
+}
+
+.slick-dots li.slick-active button:before {
+    color: rgb(27, 20, 100);
+    opacity: 0.9;
+}
+
 .sp-color-green {
     color: rgb(57,181,74);
 }
@@ -241,7 +291,7 @@ p {
 }
 
 .slick-prev:before, .slick-next:before {
-    color:#39b54a;
+    color:rgb(27, 20, 100);
 }
 
 .blockElement {
