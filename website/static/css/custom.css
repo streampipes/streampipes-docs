@@ -15,6 +15,33 @@
 @media only screen and (min-width: 1500px) {
 }
 
+.sp-color-green {
+    color: rgb(57,181,74);
+}
+
+li.installation-step {
+    list-style:none;
+    margin-top:15px;
+    margin-bottom:15px;
+}
+
+.wrapper-container {
+    display:inline-grid;
+}
+
+.wrapper-full {
+    grid-column: span 12;
+}
+
+.wrapper-step {
+    grid-column: span 3;
+    margin-right:10px;
+}
+
+.wrapper-instruction {
+    grid-column: spn 9;
+}
+
 body {
     font-family: 'Roboto', sans-serif !important;
 }

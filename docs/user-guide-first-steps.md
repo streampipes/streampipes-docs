@@ -14,26 +14,6 @@ First, StreamPipes is configured, then all pipeline elements are installed.
 In the end of this quick start, you will create your first pipelines.
 Now lets begin with setting up StreamPipes.
  
-
-## Setup StreamPipes
-In the browser you should see the image below.
-To set up the system enter a user email address and a password and click on install.
-Do NOT change the advanced settings, just click on install.
-The installation might take some time, continue by clicking on "Go to login page", once all components are successfully configured.
-If there is a problem with any of the components, please restart the whole system and delete the "config" directory on the server.
-This directory is in the same folder as the docker-compose.yml file.
-
-On the login page, enter your credentials, then you should be forwarded to the home page.
-Congratulations! You've just configured your first StreamPipes instance.
-The system configured all components by itself and the individual StreamPipes services are now ready.
-
-<div class="my-carousel">
-    <img src="/img/quickstart/setup/01_register_user.png" alt="Set Up User">
-    <img src="/img/quickstart/setup/02_user_set_up.png" alt="SetUp StreamPipes Components">
-    <img src="/img/quickstart/setup/03_login.png" alt="Go to login page">
-    <img src="/img/quickstart/setup/04_home.png" alt="Home page">
-</div>
-
 ## First Examples
 
 In this tutorial, you will create two simple pipelines that demonstrate the basic functionality of StreamPipes.
