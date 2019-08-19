@@ -45,11 +45,11 @@ In the first example, we create a live line chart to monitor the value of the ma
 * You are navigated to the pipeline view and a confirmation that the pipeline was started successfully should be shown
 
 <div class="my-carousel">
-    <img src="/img/quickstart/examples/01_example1_empty.png" alt="Show Pipeline Editor Sources">
-    <img src="/img/quickstart/examples/02_example1_source.png" alt="Sources">
-    <img src="/img/quickstart/examples/03_example1_pipeline_finished.png" alt="Pipeline Finished">
-    <img src="/img/quickstart/examples/04_example1_save.png" alt="Saved Pipeline">
-    <img src="/img/quickstart/examples/05_example1_pipeline_started.png" alt="Pipeline 01 Started">
+    <img src="/img/quickstart/examples_master/01_PipelineEditor_DataStreams.png" alt="Show Pipeline Editor Streams">
+    <img src="/img/quickstart/examples_master/02_example1_source.png" alt="Sources">
+    <img src="/img/quickstart/examples_master/03_example1_pipeline_finished.png" alt="Pipeline Finished">
+    <img src="/img/quickstart/examples_master/04_example1_save.png" alt="Saved Pipeline">
+    <img src="/img/quickstart/examples_master/05_example1_pipeline_started.png" alt="Pipeline 01 Started">
 </div>
 
 ### Create Visualization
@@ -67,11 +67,11 @@ In the first example, we create a live line chart to monitor the value of the ma
 * Congratulation you created the first pipeline and should now see the line chart
 
 <div class="my-carousel">
-    <img src="/img/quickstart/examples/06_example01_live_visualisation.png" alt="Visualize Pipeline">
-    <img src="/img/quickstart/examples/07_example01_first_step.png" alt="Configure Visualization Step 1">
-    <img src="/img/quickstart/examples/08_example01_second_step.png" alt="Configure Visualization Step 2">
-    <img src="/img/quickstart/examples/09_example01_third_step.png" alt="Configure Visualization Step 3">
-    <img src="/img/quickstart/examples/10_example1_finished.png" alt="Pipeline 01 Done">
+    <img src="/img/quickstart/examples_master/06_example01_live_visualisation.png" alt="Visualize Pipeline">
+    <img src="/img/quickstart/examples_master/07_example01_first_step.png" alt="Configure Visualization Step 1">
+    <img src="/img/quickstart/examples_master/08_example01_second_step.png" alt="Configure Visualization Step 2">
+    <img src="/img/quickstart/examples_master/09_example01_third_step.png" alt="Configure Visualization Step 3">
+    <img src="/img/quickstart/examples_master/10_example1_finished.png" alt="Pipeline 01 Done">
 </div>
 
 
@@ -96,9 +96,9 @@ Now lets start!
     * Threshold value: **1**
 
 <div class="my-carousel">
-    <img src="/img/quickstart/examples/11_example2_start.png" alt="Start Example 2">
-    <img src="/img/quickstart/examples/12_example2_numerical.png" alt="Select Numericl Filter">
-    <img src="/img/quickstart/examples/13_example2_configure_numerical.png" alt="Configure Numerical Filter">
+    <img src="/img/quickstart/examples_master/11_example2_start.png" alt="Start Example 2">
+    <img src="/img/quickstart/examples_master/12_example2_numerical.png" alt="Select Numericl Filter">
+    <img src="/img/quickstart/examples_master/13_example2_configure_numerical.png" alt="Configure Numerical Filter">
 </div>
 
 * As a next step we add an aggregation to the water level. This reduces the inaccuracies we have because the water moves in the tank. 
@@ -112,8 +112,10 @@ Now lets start!
     * Groupe By: **None**
 
 <div class="my-carousel">
-    <img src="/img/quickstart/examples/14_example2_aggregate.png" alt="Select Aggregation">
-    <img src="/img/quickstart/examples/15_example2_configure_aggregate.png" alt="Configure Aggregation">
+    <img src="/img/quickstart/examples_master/14_example2_aggregate.png" alt="Select Aggregation">
+    <img src="/img/quickstart/examples_master/15_example2_configure_aggregate.png" alt="Configure Aggregation">
+        <img src="/img/quickstart/examples_master/15_example2_configure_aggregate_2.png" alt="Configure Aggregation">
+
 </div>
 
 * With the next processing element we check if the water level decreases too fast
@@ -128,9 +130,8 @@ Now lets start!
     * Select Output: **All**
 
 <div class="my-carousel">
-    <img src="/img/quickstart/examples/16_example2_increase.png" alt="Select Increase">
-    <img src="/img/quickstart/examples/17_example2_configure1_increase.png" alt="Configute 01 Increase">
-    <img src="/img/quickstart/examples/18_example2_configure2_increase.png" alt="Configute 02 Increase">
+    <img src="/img/quickstart/examples_master/16_example2_increase.png" alt="Select Increase">
+    <img src="/img/quickstart/examples_master/17_example2_configure1_increase.png" alt="Configute 01 Increase">
 </div>
 
 * Now we connect the two stream with the sequence element, which checks if both events occur in a certain time
@@ -140,8 +141,8 @@ Now lets start!
     * Time Unit: **sec**
     
 <div class="my-carousel">
-    <img src="/img/quickstart/examples/19_example2_sequence.png" alt="Select Sequence Detection">
-    <img src="/img/quickstart/examples/20_example2_configure_sequence.png" alt="ConfigureSequence Detection">
+    <img src="/img/quickstart/examples_master/19_example2_sequence.png" alt="Select Sequence Detection">
+    <img src="/img/quickstart/examples_master/20_example2_configure_sequence.png" alt="ConfigureSequence Detection">
 </div>
 
 * Now we create a notification for the service technician that something is wrong with the system
@@ -152,15 +153,15 @@ Now lets start!
     * Content: **One notification was triggered by our first complex pipeline. Yeahhhh!**
     
 <div class="my-carousel">
-    <img src="/img/quickstart/examples/21_example2_notification.png" alt="Select Notification">
-    <img src="/img/quickstart/examples/22_example2_configure_notification.png" alt="Configure Notification">
+    <img src="/img/quickstart/examples_master/21_example2_notification.png" alt="Select Notification">
+    <img src="/img/quickstart/examples_master/22_example2_configure_notification.png" alt="Configure Notification">
 </div>
 
 * Add the dashboard sink to the increase element to monitor the preliminary results
 * Select **DS** and connect to **I**
 
 <div class="my-carousel">
-    <img src="/img/quickstart/examples/23_example2_dashboard_sink.png" alt="Select Dashboard">
+    <img src="/img/quickstart/examples_master/23_example2_dashboard_sink.png" alt="Select Dashboard">
 </div>
 
 * Save the pipeline 
@@ -171,7 +172,7 @@ Now lets start!
 * Click **Save and go to pipeline view**
  
 <div class="my-carousel">
-    <img src="/img/quickstart/examples/24_example2_save.png" alt="Save Pipeline">
+    <img src="/img/quickstart/examples_master/24_example2_save.png" alt="Save Pipeline">
 </div>
 
 * All pipeline elements should be started successfully 
@@ -181,7 +182,7 @@ Now lets start!
 * Go to visualization and create **Raw Data** visualization for the new pipeline   
     
 <div class="my-carousel">
-    <img src="/img/quickstart/examples/25_example2_started.png" alt="Pipeline Started Sucessfull">
+    <img src="/img/quickstart/examples_master/25_example2_started.png" alt="Pipeline Started Sucessfull">
     <img src="/img/quickstart/examples/26_example2_visualisation.png" alt="Add Visualization">
 </div>
 

@@ -20,7 +20,6 @@ To store changes in Consul, the update button must be clicked.
 
 <div class="my-carousel">
     <img src="/img/configuration/configuration_1.png" alt="Configuration View">
-    <img src="/img/configuration/configuration_2.png" alt="Open Configuration View">
 </div>
 
 ## Configuration for Developers

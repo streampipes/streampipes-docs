@@ -157,7 +157,7 @@ In addition, we can assign a _value specification_ to the parameter indicating t
 Our example supports a radius value between 0 and 1000 with a granularity of 1.
 In the StreamPipes UI, a required text parameter is rendered as a text input field, in case we provide an optional value specification, a slider input is automatically generated.
 
-Such user-defined parameters are called _static properties_. There are many different types of static properties (see the [Processor SDK](processor-sdk) for an overview).
+Such user-defined parameters are called _static properties_. There are many different types of static properties (see the [Processor SDK](dev-guide-sdk-guide-processors#docsNav) for an overview).
 
 One example are _DomainProperties_ we use for defining the center of the geofence.
 Our data processor requires a lat/lng pair that marks the center of the geofence.

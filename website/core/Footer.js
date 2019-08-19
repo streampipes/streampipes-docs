@@ -35,21 +35,16 @@ class Footer extends React.Component {
                         </a>
                         <div>
                             <h5>Docs</h5>
-                            {/* <a href={this.docUrl('/user-guide-introduction.html', this.props.language)}> */}
-                            {/* <a href='user-guide-introduction.html'>  */}
-                            <a href={this.props.config.baseUrl + 'docs/user-guide-introduction.html'}>
+                            <a href={this.props.config.baseUrl + 'docs/user-guide-introduction'}>
                                 User Guide
                             </a>
-                            {/* <a href={this.docUrl('dev-guide-introduction.html', this.props.language)}> */}
-                            <a href='dev-guide-introduction.html'>
+                            <a href={this.props.config.baseUrl + 'docs/dev-guide-introduction'}>
                                 Developer Guide
                             </a>
-                            {/* <a href={this.docUrl('faq-common-problems.html', this.props.language)}> */}
-                            <a href='faq-common-problems.html'> 
+                            <a href={this.props.config.baseUrl + 'docs/faq-common-problems'}> 
                                 Frequently Asked Questions
                             </a>
-                            {/* <a href={this.docUrl('privacy.html', this.props.language)}> */}
-                            <a href='privacy.html'> 
+                            <a href={this.props.config.baseUrl + 'docs/privacy'}> 
                                 Privacy Notice
                             </a>
                             <a href="https://www.fzi.de/footer/impressum/">
