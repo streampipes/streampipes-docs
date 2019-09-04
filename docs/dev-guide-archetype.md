@@ -38,7 +38,7 @@ mvn archetype:generate                              	 	     \
 mvn archetype:generate                              	 	     \
   -DarchetypeGroupId=org.streampipes          			         \
   -DarchetypeArtifactId=streampipes-archetype-pe-processors-jvm  \
-  -DarchetypeVersion={sp.version}
+  -DarchetypeVersion=0.63.0
 ```
 
 ## Processors Flink
@@ -46,7 +46,7 @@ mvn archetype:generate                              	 	     \
 mvn archetype:generate                              	 	     \
   -DarchetypeGroupId=org.streampipes          			         \
   -DarchetypeArtifactId=streampipes-archetype-pe-processors-flink  \
-  -DarchetypeVersion=0.62.0
+  -DarchetypeVersion=0.63.0
 ```
 
 ## Sinks JVM
@@ -54,7 +54,7 @@ mvn archetype:generate                              	 	     \
 mvn archetype:generate                              	 	     \
   -DarchetypeGroupId=org.streampipes          			         \
   -DarchetypeArtifactId=streampipes-archetype-pe-sinks-jvm  \
-  -DarchetypeVersion=0.62.0
+  -DarchetypeVersion=0.63.0
 ```
 
 ## Sinks Flink
@@ -62,7 +62,7 @@ mvn archetype:generate                              	 	     \
 mvn archetype:generate                              	 	     \
   -DarchetypeGroupId=org.streampipes          			         \
   -DarchetypeArtifactId=streampipes-archetype-pe-sinks-flink  \
-  -DarchetypeVersion=0.62.0
+  -DarchetypeVersion=0.63.0
 ```
 </details>
 
@@ -80,12 +80,12 @@ Open the class *Example* and edit the ``onEvent`` method to print the incoming e
 
 ```java
 @Override
-public void onEvent(Map<String, Object> in, String sourceInfo, SpOutputCollector out) {
+public void onEvent(Event event, SpOutputCollector collector) {
     // Print the incoming event on the console
     System.out.println(in);
 
     // Hand the incoming event to the output collector without changing it.
-    out.onEvent(in);
+    collector.onEvent(in);
 }
 ```
 
