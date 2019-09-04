@@ -16,10 +16,10 @@
   "developer-guide": {
     "Basics": [
       "dev-guide-introduction",
-      "dev-guide-migration",
       "dev-guide-architecture",
       "dev-guide-development-environment",
-      "dev-guide-archetype"
+      "dev-guide-archetype",
+      "dev-guide-migration"
     ],
     "Tutorials": [
       "dev-guide-tutorial-sources",

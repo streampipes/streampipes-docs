@@ -38,8 +38,8 @@ class Help extends React.Component {
                     <h2>Github</h2>
                     <p>
                         If you found a bug or if you'd like to see a new feature, add an issue at {" "}
-                        <a href="https://github.com/streampipes/streampipes-ce">
-                            https://github.com/streampipes/streampipes-ce
+                        <a href="https://github.com/streampipes/streampipes">
+                            https://github.com/streampipes/streampipes
                         </a>.
                     </p>
                     <h2>Slack</h2>

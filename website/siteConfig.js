@@ -118,7 +118,7 @@ const siteConfig = {
     /* Open Graph and Twitter card images */
     ogImage: 'img/favicon.png',
     twitterImage: 'img/docusaurus.png',
-    repoUrl: 'https://github.com/streampipes/streampipes-ce'
+    repoUrl: 'https://github.com/streampipes/streampipes'
 
     // You may provide arbitrary config keys to be used as needed by your
     // template. For example, if you need your repo's URL...

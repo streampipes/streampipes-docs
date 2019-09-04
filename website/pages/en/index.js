@@ -100,7 +100,7 @@ class HomeSplash extends React.Component {
                     <PromoSection>
                         <Button href={docUrl('user-guide-tour.html', language)}>View the tour</Button>
                         <Button href={docUrl('user-guide-installation.html', language)}>Installation Guide</Button>
-                        <Button href={'https://www.github.com/streampipes/streampipes-ce'}><i
+                        <Button href={'https://www.github.com/streampipes/streampipes'}><i
                             className="fab fa-github"></i>&nbsp;View on Github</Button>
                     </PromoSection>
                     <ScreenshotSection screenshot_src={imgUrl('streampipes-screenshot.png')}/>

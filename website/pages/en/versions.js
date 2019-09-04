@@ -18,7 +18,7 @@ const versions = require(`${CWD}/versions.json`);
 
 function Versions(props) {
   const latestVersion = versions[0];
-  const repoUrl = `https://github.com/streampipes/streampipes-ce`;
+  const repoUrl = `https://github.com/streampipes/streampipes`;
   return (
     <div className="docMainWrapper wrapper">
       <Container className="mainContainer versionsContainer">
