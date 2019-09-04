@@ -7,7 +7,7 @@ sidebar_label: Installation
 
 ### Hardware
 
-* The **desktop version** requires at least 8GB RAM, the **full big data version** requires at least 16 GB RAM.
+* The **lite version** (if you simply want to run StreamPipes on a laptop for testing purposes) requires at least 8GB RAM, the **full version** requires at least 16 GB RAM.
 * Docker (latest version, see instructions below)
 * Docker Compose (latest version., see instructions below)
 
@@ -69,13 +69,11 @@ You need to have Docker installed on your system before you continue with the in
                     </div>
                     <div class="wrapper-instruction">
                        <div style="margin-bottom:5px;"><b>Linux/Mac:</b> In a command prompt, open the folder <code>osx_linux</code> and run <code>./streampipes
-                            start</code> (desktop version) or <code>./streampipes start bigdata</code> (big
-                        data version).<br/>
+                            start</code>.<br/>
                         </div>
                         <div style="margin-top:5px;">
                         <b>Windows 10:</b> In a command prompt, open the folder <code>windows10</code> and run <code>streampipes.bat
-                                                    start</code> (desktop version) or <code>streampipes.bat start bigdata</code> (big
-                                                data version).<br/>
+                                                    start</code>.<br/>
                         </div>
                     </div>
                 </div>
@@ -89,7 +87,7 @@ You need to have Docker installed on your system before you continue with the in
                         </span>
                     </div>
                     <div class="wrapper-instruction">
-                       When asked, enter the IP address or hostname of your server (called SERVER_IP in the next step).
+                       When asked, enter the version (full or lite) and the IP address or hostname of your server (called SERVER_IP in the next step).
                     </div>
                 </div>
             </li>
