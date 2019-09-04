@@ -23,7 +23,8 @@
     ],
     "Tutorials": [
       "dev-guide-tutorial-sources",
-      "dev-guide-tutorial-processors"
+      "dev-guide-tutorial-processors",
+      "dev-guide-tutorial-sinks"
     ],
     "SDK Reference": [
       "dev-guide-sdk-guide-sources",

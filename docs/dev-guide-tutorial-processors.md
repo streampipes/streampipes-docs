@@ -32,7 +32,7 @@ Enter the following command to create a new project based on the StreamPipes ``P
 
 ```
 mvn archetype:generate -DarchetypeGroupId=org.streampipes \
--DarchetypeArtifactId=streampipes-archetype-pe-processors-flink -DarchetypeVersion=0.61.0 \
+-DarchetypeArtifactId=streampipes-archetype-pe-processors-flink -DarchetypeVersion=0.63.0 \
 -DgroupId=org.streampipes.tutorial -DartifactId=geofence-tutorial -DclassNamePrefix=Geofencing -DpackageName=geofencing
 ```
 
@@ -79,15 +79,14 @@ public class GeofencingController extends
 
 	@Override
 	public DataProcessorDescription declareModel() {
-		return ProcessingElementBuilder.create("org.streampipes.tutorial-geofencing", "Geofencing",
-				"Description")
+		return ProcessingElementBuilder.create("org.streampipes.tutorial-geofencing")
 						.category(DataProcessorType.ENRICH)
+                        .withAssets(Assets.DOCUMENTATION, Assets.ICON)
+						.withLocales(Locales.EN)
 						.requiredStream(StreamRequirementsBuilder
 							.create()
 							.requiredProperty(EpRequirements.anyProperty())
 							.build())
-						.supportedFormats(SupportedFormats.jsonFormat())
-						.supportedProtocols(SupportedProtocols.kafka())
 						.outputStrategy(OutputStrategies.keep())
 						.requiredTextParameter(Labels.from(EXAMPLE_KEY, "Example Text Parameter", "Example " +
 				"Text Parameter Description"))
@@ -113,7 +112,7 @@ In this class, we need to implement two methods: The `declareModel` method is us
 The second method, `getRuntime` is used to create and deploy the parameterized Flink program once a pipeline using this element is started.
 
 Similar to data sources, the SDK provides a builder class to generate the description for data processors.
-Delete the conent within the ``declareModel`` method and add the following lines to the `declareModel` method:
+Delete the content within the ``declareModel`` method and add the following lines to the `declareModel` method:
 
 ```java
 return ProcessingElementBuilder.create("org.streampipes.tutorial.geofencing", "Geofencing", "A simple geofencing data processor " +

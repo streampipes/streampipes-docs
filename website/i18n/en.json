@@ -65,6 +65,10 @@
         "title": "Tutorial: Data Processors",
         "sidebar_label": "Tutorial: Data Processors"
       },
+      "dev-guide-tutorial-sinks": {
+        "title": "Tutorial: Data Sinks",
+        "sidebar_label": "Tutorial: Data Sinks"
+      },
       "dev-guide-tutorial-sources": {
         "title": "Tutorial: Data Sources",
         "sidebar_label": "Tutorial: Data Sources"

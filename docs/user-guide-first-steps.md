@@ -4,15 +4,27 @@ title: First steps
 sidebar_label: First steps
 ---
 
-This quick start explains how StreamPipes can be set up in the browser.
+In this section, you'll learn how to create and run pipelines in StreamPipes.
 Before starting with this guide, all steps from the installation guide must be finished successfully and StreamPipes must be up and running.
-Navigate to the StreamPipes graphical user interface in the browser.
-Use the IP or hostname of the server StreamPipes is running on.
 
-This guide consists of three steps.
-First, StreamPipes is configured, then all pipeline elements are installed.
-In the end of this quick start, you will create your first pipelines.
-Now lets begin with setting up StreamPipes.
+This guide consists of three steps:
+First, you'll learn how to create your first pipeline using the interactive tutorial.
+Afterwards, this section contains two examples on how to create pipelines based on the built-in data simulator.
+ 
+## Interactive Tutorial
+The easiest way to get started with StreamPipes is the interactive tutorial. Once you open the pipeline editor for the first time, you'll see a splash screen as shown below.
+Click **Start tour** to start the interactive tutorial, which will guide you through your first steps with StreamPipes.
+ 
+![Interactive Tutorial](/img/quickstart/interactive-tutorial.png)  
+
+If the splash screen does not show up, make sure you've installed the following pipeline elements:
+* Flow rate (data stream)
+* Numerical Filter (processing element)
+* Dashboard (data sink)
+
+After you've finished this very first tour, try the following tours to learn more about other features of StreamPipes:
+* Open the Live Dashboard and start the dashboard tour (by clicking the school icon in the top menu bar) to learn how to create real-time visualizations
+* Open StreamPipes Connect and start the tour to learn how to connect new data sources with StreamPipes.
  
 ## First Examples
 
@@ -28,7 +40,6 @@ We are happy to help you.
 All the data sources that we have integrated in the StreamPipes demonstrator are simulated according to real world sensors.
 For example a flow rate sensor in a water pipe, which measures how much water flows in that pipe or a water level sensor in a water tank, that reports how high the water level is in the tank.
 In the next section you will use the flow rate sensor to build your first pipeline.
-
 
 ## Flow Rate Visualization
 In the first example, we create a live line chart to monitor the value of the mass flow from a flow rate sensor.
@@ -119,8 +130,8 @@ Now lets start!
 </div>
 
 * With the next processing element we check if the water level decreases too fast
-* Select **I** (Increase) and connect it to **A**
-* Configure **Increase**:
+* Select **I** (Trend) and connect it to **A**
+* Configure **Trend**:
     * Timestamp field: **timestamp**
     * Value to observe: **aggregatedValue** (This value is created by previous element)
     * Group by: **sensorId**
