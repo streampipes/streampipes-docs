@@ -1,7 +1,8 @@
 ---
-id: dev-guide-tutorial-sources
+id: version-0.64.0-dev-guide-tutorial-sources
 title: Tutorial: Data Sources
 sidebar_label: Tutorial: Data Sources
+original_id: dev-guide-tutorial-sources
 ---
 
 In this tutorial, we will add a new data source consisting of a single data stream. The source will be provided as a standalone component (i.e., the description will be accessible through an integrated web server).

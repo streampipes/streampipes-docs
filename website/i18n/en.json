@@ -675,6 +675,26 @@
       "version-0.63.0/version-0.63.0-user-guide-installation": {
         "title": "Installation",
         "sidebar_label": "Installation"
+      },
+      "version-0.64.0/version-0.64.0-dev-guide-archetype": {
+        "title": "Start Developing",
+        "sidebar_label": "Start Developing"
+      },
+      "version-0.64.0/version-0.64.0-dev-guide-development-environment": {
+        "title": "Development Environment",
+        "sidebar_label": "Development Environment"
+      },
+      "version-0.64.0/version-0.64.0-dev-guide-tutorial-processors": {
+        "title": "Tutorial: Data Processors",
+        "sidebar_label": "Tutorial: Data Processors"
+      },
+      "version-0.64.0/version-0.64.0-dev-guide-tutorial-sinks": {
+        "title": "Tutorial: Data Sinks",
+        "sidebar_label": "Tutorial: Data Sinks"
+      },
+      "version-0.64.0/version-0.64.0-dev-guide-tutorial-sources": {
+        "title": "Tutorial: Data Sources",
+        "sidebar_label": "Tutorial: Data Sources"
       }
     },
     "links": {

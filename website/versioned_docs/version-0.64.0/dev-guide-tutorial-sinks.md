@@ -1,7 +1,8 @@
 ---
-id: dev-guide-tutorial-sinks
+id: version-0.64.0-dev-guide-tutorial-sinks
 title: Tutorial: Data Sinks
 sidebar_label: Tutorial: Data Sinks
+original_id: dev-guide-tutorial-sinks
 ---
 
 In this tutorial, we will add a new data sink using the standalone wrapper.

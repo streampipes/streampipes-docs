@@ -1,7 +1,8 @@
 ---
-id: dev-guide-archetype
+id: version-0.64.0-dev-guide-archetype
 title: Start Developing
 sidebar_label: Start Developing
+original_id: dev-guide-archetype
 ---
 
 In this tutorial we explain how you can use the Maven archetypes to develop your own StreamPipes processors and sinks.

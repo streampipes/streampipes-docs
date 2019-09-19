@@ -1,7 +1,8 @@
 ---
-id: dev-guide-tutorial-processors
+id: version-0.64.0-dev-guide-tutorial-processors
 title: Tutorial: Data Processors
 sidebar_label: Tutorial: Data Processors
+original_id: dev-guide-tutorial-processors
 ---
 
 In this tutorial, we will add a new data processor using the Apache Flink wrapper.
