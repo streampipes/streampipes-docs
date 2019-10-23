@@ -37,10 +37,21 @@ mvn archetype:generate -DarchetypeGroupId=org.streampipes \
 -DgroupId=org.streampipes.tutorial -DartifactId=geofence-tutorial -DclassNamePrefix=Geofencing -DpackageName=geofencing
 ```
 
+
 Once you've imported the generated project, the project structure should look as follows:
 
 <img src="/img/tutorial-processors/project-structure-processor.PNG" alt="Project Structure Data Processor">
 
+
+Due to a dependency conflict in the 0.64.0 release, add open your pom.xml and add the following lines to the ``dependencies`` section:
+```
+<dependency>
+    <groupId>javax.validation</groupId>
+    <artifactId>validation-api</artifactId>
+    <version>2.0.1.Final</version>
+</dependency>
+
+```
 
 <div class="admonition tip">
 <div class="admonition-title">Tip</div>

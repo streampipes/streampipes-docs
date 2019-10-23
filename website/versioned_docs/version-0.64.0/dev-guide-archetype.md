@@ -77,6 +77,16 @@ For details, have a look at the other parts of the Developer Guide, where these 
 
 <img src="/img/archetype/project_structure.png" width="30%" alt="Project Structure">
 
+Due to a dependency conflict in the 0.64.0 release, open your pom.xml and add the following lines to the ``dependencies`` section:
+```
+<dependency>
+    <groupId>javax.validation</groupId>
+    <artifactId>validation-api</artifactId>
+    <version>2.0.1.Final</version>
+</dependency>
+
+```
+
 Open the class *Example* and edit the ``onEvent`` method to print the incoming event, log it to the console and send it to the next component without changing it.
 
 ```java

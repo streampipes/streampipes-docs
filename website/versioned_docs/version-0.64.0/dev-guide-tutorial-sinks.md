@@ -32,6 +32,15 @@ Once you've imported the generated project, the project structure should look as
 
 <img src="/img/tutorial-sinks/project-structure-sinks.png" alt="Project Structure Data Sink">
 
+Due to a dependency conflict in the 0.64.0 release, open your pom.xml and add the following lines to the ``dependencies`` section:
+```
+<dependency>
+    <groupId>javax.validation</groupId>
+    <artifactId>validation-api</artifactId>
+    <version>2.0.1.Final</version>
+</dependency>
+
+```
 
 <div class="admonition tip">
 <div class="admonition-title">Tip</div>
