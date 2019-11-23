@@ -7,7 +7,7 @@ sidebar_label: Installation
 
 ### Hardware
 
-* The **lite version** (if you simply want to run StreamPipes on a laptop for testing purposes) requires at least 8GB RAM, the **full version** requires at least 16 GB RAM.
+* The **lite version** (if you simply want to run StreamPipes on a laptop for testing purposes) requires at least 4GB RAM, the **full version** requires at least 10 GB RAM.
 * Docker (latest version, see instructions below)
 * Docker Compose (latest version., see instructions below)
 
