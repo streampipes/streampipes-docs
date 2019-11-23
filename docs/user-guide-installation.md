@@ -87,7 +87,7 @@ You need to have Docker installed on your system before you continue with the in
                         </span>
                     </div>
                     <div class="wrapper-instruction">
-                       When asked, enter the version (full or lite) and the IP address or hostname of your server (called SERVER_IP in the next step).
+                       When asked, enter the version (full or lite).
                     </div>
                 </div>
             </li>
@@ -100,7 +100,7 @@ You need to have Docker installed on your system before you continue with the in
                         </span>
                     </div>
                     <div class="wrapper-instruction">
-                        Open your browser, navigate to http://SERVER_IP:80 and finish the setup according to the instructions below.
+                        Open your browser, navigate to http://SERVER_IP:80 (e.g., http://localhost) and finish the setup according to the instructions below.
                     </div>
                 </div>
             </li>
