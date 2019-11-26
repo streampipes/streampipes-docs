@@ -15,7 +15,8 @@ After some very early prototypes (see an early screenshot below :-)) demonstrati
 Since then, we presented and showcased StreamPipes at various events: fairs, meetups, conference talks and so on. For instance, in 2019 we attended over 20 events where we gave demos or talked about StreamPipes.
 It is great to see that the solution is now steadily getting increased traction in the Industrial IoT space.
 
-<img class="blog-image" style="max-width:90%;" src="/blog/assets/2019-11-25/2019-11_StreamPipes-v0.png" alt="1st prototype of the StreamPipes UI">
+<img class="blog-image" style="max-width:90%;margin-bottom:20px;" src="/blog/assets/2019-11-25/2019-11_StreamPipes-v0.png" alt="1st prototype of the StreamPipes UI">
+<img class="blog-image" style="max-width:90%;" src="/blog/assets/2019-11-25/2019-11_StreamPipes-now.png" alt="1st prototype of the StreamPipes UI">
 
 ## Moving to the Apache Incubator
 Earlier this year, we discussed how to continue the development of StreamPipes. For the core team at FZI, our main goal was to widen the developer base, attract external developers and to make StreamPipes a real community-driven open source project.
